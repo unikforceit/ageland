@@ -39,7 +39,7 @@ function ageland_single_title($arg){
 
         return $title;
 }
-function ageland_unit_breadcumb($separator = '') {
+function ageland_unit_breadcumb($separator = '/') {
     /* === OPTIONS === */
     $text['home']     = esc_html('Home'); // text for the 'Home' link
     $text['category'] = 'Archive by Category "%s"'; // text for a category page

@@ -6,26 +6,43 @@
  *
  */
 if (is_active_sidebar('sidebar-2')){
-    $col = 'col-lg-6 col-md-6';
+    $col = 'col-lg-12';
 }else {
     $col = 'col-lg-4 col-md-6';
 }
 ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class($col); ?>>
-    <div class="single-blog">
-        <?php if ( has_post_thumbnail()) : ?>
-            <div class="blog-img">
-                <a href="<?php echo esc_url( get_permalink() )?>"><?php the_post_thumbnail('full'); ?></a>
+
+
+    <div class="blog_page_single_post">
+        <div class="single_blog_in">
+            <div class="card">
+                <?php if ( has_post_thumbnail()) : ?>
+                <div class="images">
+                    <a href="<?php echo esc_url( get_permalink() )?>"><?php the_post_thumbnail('full'); ?></a>
+                    <div class="dates">
+                        <p>Sep 2018</p>
+                    </div>
+                </div>
+                <?php endif; ?>
+                <div class="card-body">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-tags"></i> <?php echo get_the_category(); ?></a></li>
+                        <li>
+                            <a href="#"><i class="fas fa-comment-alt"></i> <?php echo get_comments_number(); ?> Comments</a>
+                        </li>
+                        <li>
+                            <p><img src="<?php echo get_avatar( get_the_author_meta()); ?>" alt="#" />by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID'))?>"><?php echo get_the_author()?></a>
+                            </p>
+                        </li>
+                    </ul>
+                    <h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+                    <p><?php the_excerpt();?></p>
+                    <a href="<?php the_permalink();?>" class="btn"><?php echo __('reads more', 'ageland')?></a>
+                </div>
             </div>
-        <?php endif; ?>
-        <div class="blog-info">
-            <h3 class="blog-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
-            <ul class="blog-meta">
-                <li><a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('j'))?>"><i class="far fa-calendar"></i> <?php the_time('j F, Y');?></a></li>
-                <li><a href="#"><i class="far fa-clock"></i> <?php echo display_read_time();?> Min To Read</a></li>
-            </ul>
-            <div class="blog-cotent"><?php the_excerpt();?></div>
-            <a href="<?php the_permalink();?>" class="blog-btn"><?php echo __('Read More', 'ageland')?></a>
         </div>
+        <!--/.single_blog_in-->
+
     </div>
 </div>

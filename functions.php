@@ -134,18 +134,13 @@ function ageland_fonts_url() {
     $subsets   = '';
 
     /* translators: If there are characters in your language that are not supported by this font, translate this to 'off'. Do not translate into your own language. */
-    if ( 'off' !== esc_html_x( 'on', 'Rubik font: on or off', 'ageland' ) ) {
-        $fonts[] = 'Rubik:300,400,500,600,700,800,900';
+    if ( 'off' !== esc_html_x( 'on', 'Work Sans font: on or off', 'ageland' ) ) {
+        $fonts[] = 'Work Sans:400,500,600,700,900';
     }
 
     /* translators: If there are characters in your language that are not supported by this font, translate this to 'off'. Do not translate into your own language. */
-    if ( 'off' !== esc_html_x( 'on', 'Lato font: on or off', 'ageland' ) ) {
-        $fonts[] = 'Lato:300,400,700,900';
-    }
-
-    /* translators: If there are characters in your language that are not supported by this font, translate this to 'off'. Do not translate into your own language. */
-    if ( 'off' !== esc_html_x( 'on', 'Source Sans Pro font: on or off', 'ageland' ) ) {
-        $fonts[] = 'Source Sans Pro:300,400,600,700,900';
+    if ( 'off' !== esc_html_x( 'on', 'Hind font: on or off', 'ageland' ) ) {
+        $fonts[] = 'Hind:300,400,500,600,700';
     }
 
     if ( $fonts ) {
@@ -163,19 +158,36 @@ function ageland_fonts_url() {
 function ageland_scripts() {
 
 	wp_enqueue_style('ageland-fonts',  ageland_fonts_url());
+	wp_enqueue_style('ageland-all-css', get_template_directory_uri() . '/assets/css/all.css');
 	wp_enqueue_style('ageland-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
-	wp_enqueue_style('ageland-flaticon', get_template_directory_uri() . '/assets/css/flaticon.css');
-	wp_enqueue_style('ageland-library', get_template_directory_uri() . '/assets/css/library.css');
-    wp_enqueue_style('ageland-main', get_template_directory_uri() . '/assets/css/ageland.css');
-    wp_enqueue_style('ageland-responsive', get_template_directory_uri() . '/assets/css/responsive.css');
+	wp_enqueue_style('ageland-admin-css', get_template_directory_uri() . '/assets/css/admin.css');
+	wp_enqueue_style('ageland-animate-css', get_template_directory_uri() . '/assets/css/animate.css');
+    wp_enqueue_style('ageland-animation-spin', get_template_directory_uri() . '/assets/css/animation-spin.css');
+    wp_enqueue_style('ageland-aos-css', get_template_directory_uri() . '/assets/css/aos.css');
+    wp_enqueue_style('ageland-lity-min-css', get_template_directory_uri() . '/assets/css/lity.min.css');
+    wp_enqueue_style('ageland-magnific-popup-css', get_template_directory_uri() . '/assets/css/magnific-popup.css');
+    wp_enqueue_style('ageland-material-kit-min-css', get_template_directory_uri() . '/assets/css/material-kit.min.css');
+    wp_enqueue_style('ageland-music-player-css', get_template_directory_uri() . '/assets/css/music_player.css');
+    wp_enqueue_style('ageland-normalize-css', get_template_directory_uri() . '/assets/css/normalize.css');
+    wp_enqueue_style('ageland-owl-carousel-min-css', get_template_directory_uri() . '/assets/css/owl.carousel.min.css');
+    wp_enqueue_style('ageland-owl-theme-default-min-css', get_template_directory_uri() . '/assets/css/owl.theme.default.min.css');
+    wp_enqueue_style('ageland-ageland-css', get_template_directory_uri() . '/assets/css/ageland.css');
+    wp_enqueue_style('ageland-swiper-css', get_template_directory_uri() . '/assets/css/swiper.css');
     wp_enqueue_style('ageland-default', get_template_directory_uri() . '/assets/css/default.css');
     wp_enqueue_style('ageland-style', get_stylesheet_uri() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' ); 
 	}
-	wp_enqueue_script('ageland-bootstrap',get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), ageland_theme_version(), true);
-	wp_enqueue_script('ageland-library',get_template_directory_uri() . '/assets/js/library.js', array('jquery'), ageland_theme_version(), true);
+	wp_enqueue_script('ageland-bootstrap',get_template_directory_uri() . '/assets/js/vendor/bootstrap.min.js', array('jquery'), ageland_theme_version(), true);
+	wp_enqueue_script('ageland-library',get_template_directory_uri() . '/assets/js/vendor/popper.min.js', array('jquery'), ageland_theme_version(), true);
+	wp_enqueue_script('ageland-main',get_template_directory_uri() . '/assets/js/vendor/aos.js', array('jquery'), ageland_theme_version(), true);
+	wp_enqueue_script('ageland-main',get_template_directory_uri() . '/assets/js/vendor/owl-carousel.js', array('jquery'), ageland_theme_version(), true);
+	wp_enqueue_script('ageland-main',get_template_directory_uri() . '/assets/js/vendor/isotop.js', array('jquery'), ageland_theme_version(), true);
+	wp_enqueue_script('ageland-main',get_template_directory_uri() . '/assets/js/vendor/magnifice-js.js', array('jquery'), ageland_theme_version(), true);
+	wp_enqueue_script('ageland-main',get_template_directory_uri() . '/assets/js/vendor/swiper.js', array('jquery'), ageland_theme_version(), true);
+	wp_enqueue_script('ageland-main',get_template_directory_uri() . '/assets/js/vendor/musicplayer-min.js', array('jquery'), ageland_theme_version(), true);
+	wp_enqueue_script('ageland-main',get_template_directory_uri() . '/assets/js/vendor/video.js', array('jquery'), ageland_theme_version(), true);
 	wp_enqueue_script('ageland-main',get_template_directory_uri() . '/assets/js/main.js', array('jquery'), ageland_theme_version(), true);
 	wp_enqueue_style('dashicons');
 }

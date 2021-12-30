@@ -18,77 +18,65 @@ if (is_home() && get_option('page_for_posts')) {
     $title = get_the_title();
 }
 ?>
-<!-- header area start here  -->
-<header class="header-v5 transparent-header header-md-none" id="sticky">
+
+
+<!-- header part -->
+<header class="header_part classic_header dark_color">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-2">
-                <div class="brand-area text-left">
-                    <?php ageland_logo(); ?>
-                </div>
-            </div>
-            <div class="col-lg-10">
-                <nav class="main-menu">
-                    <?php
-                    wp_nav_menu(array(
-                        'container' => false,
-                        'menu_id' => 'main-nav',
-                        'theme_location' => 'primary',
-                        'fallback_cb' => 'ageland_no_main_nav',
-                        'items_wrap' => '<ul>%3$s</ul>',
-                    ));
-                    ?>
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-xl justify-content-between align-items-center">
+                    <div class="pu_logo_area">
+                        <?php ageland_logo(); ?>
+                        <?php ageland_logo('navbar-brand sticky_logo'); ?>
+                    </div>
+                    <div class="main_nav_wrapper d-flex justify-content-end">
+                        <div class="main_nav collapse navbar-collapse justify-content-end"
+                             id="navbarNavDropdown">
+                            <?php
+                            echo str_replace(['menu-item-has-children', 'sub-menu'], ['dropdown', 'dropdown-menu'],
+                                wp_nav_menu( array(
+                                        'container' => false,
+                                        'echo' => false,
+                                        'menu_id' => 'main-menu',
+                                        'theme_location' => 'primary',
+                                        'fallback_cb'=> 'moda_no_main_nav',
+                                        'items_wrap' => '<ul class="navbar-nav">%3$s</ul>',
+                                    )
+                                ));
+                            ?>
+                        </div>
+                        <div class="header_right_btn">
+                            <a href="#" class="ag_btn btn_1 d-none d-sm-block">Sing In</a>
+                            <div
+                                    class="pu_collaps_menu_icon offcanvus_menu_trigger navbar-toggler collapsed mr-0">
+                                <div class="burger_icon">
+                                    <span class="burger_icon_top"></span>
+                                    <span class="burger_icon_bottom"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </div>
     </div>
 </header>
-<!-- header area end here  -->
-<!-- mobile menu are start here  -->
-<div class="mobile-menu-area">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-6">
-                <div class="logo-area">
-                    <?php ageland_logo(); ?>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="menu-bar text-right">
-                    <span class="fas fa-bars"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mobile-menu">
-        <nav>
-            <?php
-            wp_nav_menu(array(
-                    'container' => false,
-                    'menu_id' => 'm-main-nav',
-                    'theme_location' => 'primary',
-                    'fallback_cb' => 'ageland_no_main_nav',
-                    'items_wrap' => '<ul>%3$s</ul>',
-                )
-            );
-            ?>
-        </nav>
-    </div>
-</div>
-<div class="menu-overlay"></div>
-<!-- mobile menu are end here  -->
-<!-- breadcrumb ara start here  -->
-<section class="breadcrumb-area"
-         data-background="<?php echo get_template_directory_uri(); ?>/assets/img/breadcrumb-bg.jpg">
+<!-- header part end -->
+
+<!--broadcramp-->
+<header class="inner_broadcramp" data-background="<?php echo get_template_directory_uri(); ?>/assets/img/breadcrumb-bg.jpg">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb-wrap text-center">
-                    <h2 class="page-title"><?php echo esc_html($title); ?></h2>
+            <div class="col-md-12">
+                <div class="broadcramp_inside_hdr">
+                    <h4><?php echo esc_html($title); ?></h4>
                     <?php ageland_unit_breadcumb(); ?>
                 </div>
+                <!--/.broadcramp_inside_hdr-->
             </div>
         </div>
     </div>
-</section>
-<!-- breadcrumb ara end here  -->
+    <!--/.container-->
+</header>
+<!--broadcramp-->

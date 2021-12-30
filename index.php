@@ -20,12 +20,10 @@ if (is_active_sidebar('sidebar-2')) {
 }
 ?>
 <!--- Blog Content --->
-<section class="blog-area-five section">
+<section class="blog_page_main">
     <div class="container">
         <div class="row">
-            <div class="<?php echo esc_attr($sidebar); ?>">
-                <?php get_template_part('layouts/sidebar', 'left'); ?>
-            </div>
+
             <div class="<?php echo esc_attr($main); ?>">
                 <div class="row">
                     <?php if (have_posts()) :
@@ -47,6 +45,9 @@ if (is_active_sidebar('sidebar-2')) {
                         <?php ageland_pagination(); ?>
                     </div>
                 </div>
+            </div>
+            <div class="<?php echo esc_attr($sidebar); ?>">
+                <?php get_template_part('layouts/sidebar', 'right'); ?>
             </div>
         </div>
     </div>

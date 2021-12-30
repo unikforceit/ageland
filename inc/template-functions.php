@@ -64,13 +64,13 @@ function ageland_comment_callback($comment, $args, $depth) {
     }
 
 
-function ageland_logo(){
+function ageland_logo($class='navbar-brand main_logo'){
     $custom_logo_id = get_theme_mod( 'custom_logo' );
 
     if ( $custom_logo_id ) {
-        echo '<a class="logo" href='.esc_url( home_url( '/' ) ).' rel="home">'.wp_get_attachment_image( $custom_logo_id, 'full' ).'</a>';
+        echo '<a class="'.$class.'" href='.esc_url( home_url( '/' ) ).' rel="home">'.wp_get_attachment_image( $custom_logo_id, 'full' ).'</a>';
     } else {
-        echo '<a class="logo" href='.esc_url( home_url( '/' ) ).' rel="home">'.get_bloginfo( 'name' ).'</a>';
+        echo '<a class="'.$class.'" href='.esc_url( home_url( '/' ) ).' rel="home">'.get_bloginfo( 'name' ).'</a>';
     }
 }
 
