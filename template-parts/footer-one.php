@@ -1,16 +1,18 @@
-<!-- footer area start here  -->
-<footer class="footer-area">
+<!--footer-->
+<footer class="footers home2">
     <div class="container">
-        <div class="footer-widget-area">
-            <?php get_template_part('layouts/footer', 'widget'); ?>
-        </div>
-        <div class="copyright-area">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="copyright">&copy; Designed & Developed by Team <a href="#">matethemes</a></p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="copyright_text">
+                    <p>© 2021 UnikForce IT, all rights reserved.</p>
                 </div>
+                <!--/.copyright_text-->
+            </div>
+            <div class="col-md-6">
+                <!--/.footer_social-->
             </div>
         </div>
     </div>
+    <!--/.container-->
 </footer>
-<!-- footer area end here  -->
+<!--footer-->

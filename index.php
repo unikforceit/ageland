@@ -11,7 +11,7 @@
  *
  */
 get_header();
-if (is_active_sidebar('sidebar-2')) {
+if (is_active_sidebar('sidebar-1')) {
     $main = 'col-lg-8';
     $sidebar = 'col-lg-4';
 } else {
@@ -23,9 +23,8 @@ if (is_active_sidebar('sidebar-2')) {
 <section class="blog_page_main">
     <div class="container">
         <div class="row">
-
             <div class="<?php echo esc_attr($main); ?>">
-                <div class="row">
+                <div class="blog_page_single_post">
                     <?php if (have_posts()) :
 
                         /* Start the Loop */
@@ -40,10 +39,8 @@ if (is_active_sidebar('sidebar-2')) {
 
                     endif; ?>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <?php ageland_pagination(); ?>
-                    </div>
+                <div class="pagination-post">
+                     <?php ageland_pagination(); ?>
                 </div>
             </div>
             <div class="<?php echo esc_attr($sidebar); ?>">

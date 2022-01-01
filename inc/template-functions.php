@@ -238,12 +238,11 @@ function ageland_numeric_posts_nav() {
         $links[] = $paged + 1;
     }
 
-    echo '<div class="pagination-area">
-								<ul class="page-pagination justify-content-start">' . "\n";
+    echo '<ul class="pagination justify-content-left">' . "\n";
 
     /** Previous Post Link */
     if ( get_previous_posts_link() )
-        printf( '<li>%s</li>' . "\n", get_previous_posts_link('<i class="fas fa-arrow-left"></i>') );
+        printf( '<li>%s</li>' . "\n", get_previous_posts_link('<i class="fas fa-angle-left"></i>') );
 
     /** Link to first page, plus ellipses if necessary */
     if ( ! in_array( 1, $links ) ) {
@@ -273,9 +272,9 @@ function ageland_numeric_posts_nav() {
 
     /** Next Post Link */
     if ( get_next_posts_link() )
-        printf( '<li>%s</li>' . "\n", get_next_posts_link('<i class="fas fa-arrow-right"></i>') );
+        printf( '<li>%s</li>' . "\n", get_next_posts_link('<i class="fas fa-angle-right"></i>') );
 
-    echo '</ul></div>' . "\n";
+    echo '</ul>' . "\n";
 
 }
 function ageland_pagination(){

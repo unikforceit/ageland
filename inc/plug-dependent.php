@@ -49,11 +49,11 @@ function ageland_unit_breadcumb($separator = '/') {
     $text['404']      = 'Error 404'; // text for the 404 page
     $text['page']     = 'Page %s'; // text 'Page N'
     $text['cpage']    = 'Comment Page %s'; // text 'Comment Page N'
-    $wrap_before    = '<div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
-    $wrap_after     = '</div><!-- .breadcrumbs -->'; // the closing wrapper tag
-    $sep            = '<span class="breadcrumbs__separator"> '.$separator.' </span>'; // separator between crumbs
-    $before         = '<span class="breadcrumbs__current">'; // tag before the current crumb
-    $after          = '</span>'; // tag after the current crumb
+    $wrap_before    = '<ul class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
+    $wrap_after     = '</ul><!-- .breadcrumbs -->'; // the closing wrapper tag
+    $sep            = '<li class="breadcrumbs__separator"> '.$separator.' </li>'; // separator between crumbs
+    $before         = '<li class="breadcrumbs__current">'; // tag before the current crumb
+    $after          = '</li>'; // tag after the current crumb
     $show_on_home   = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
     $show_home_link = 1; // 1 - show the 'Home' link, 0 - don't show
     $show_current   = 1; // 1 - show current page title, 0 - don't show
@@ -61,10 +61,10 @@ function ageland_unit_breadcumb($separator = '/') {
     /* === END OF OPTIONS === */
     global $post;
     $home_url       = home_url('/');
-    $link           = '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">';
+    $link           = '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">';
     $link          .= '<a class="breadcrumbs__link" href="%1$s" itemprop="item"><span itemprop="name">%2$s</span></a>';
     $link          .= '<meta itemprop="position" content="%3$s" />';
-    $link          .= '</span>';
+    $link          .= '</li>';
     $parent_id      = ( $post ) ? $post->post_parent : '';
     $home_link      = sprintf( $link, $home_url, $text['home'], 1 );
     if ( is_home() || is_front_page() ) {

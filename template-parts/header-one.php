@@ -19,7 +19,6 @@ if (is_home() && get_option('page_for_posts')) {
 }
 ?>
 
-
 <!-- header part -->
 <header class="header_part classic_header dark_color">
     <div class="container">
@@ -40,16 +39,14 @@ if (is_home() && get_option('page_for_posts')) {
                                         'echo' => false,
                                         'menu_id' => 'main-menu',
                                         'theme_location' => 'primary',
-                                        'fallback_cb'=> 'moda_no_main_nav',
+                                        'fallback_cb'=> 'ageland_no_main_nav',
                                         'items_wrap' => '<ul class="navbar-nav">%3$s</ul>',
                                     )
                                 ));
                             ?>
                         </div>
                         <div class="header_right_btn">
-                            <a href="#" class="ag_btn btn_1 d-none d-sm-block">Sing In</a>
-                            <div
-                                    class="pu_collaps_menu_icon offcanvus_menu_trigger navbar-toggler collapsed mr-0">
+                            <div class="pu_collaps_menu_icon offcanvus_menu_trigger navbar-toggler collapsed mr-0">
                                 <div class="burger_icon">
                                     <span class="burger_icon_top"></span>
                                     <span class="burger_icon_bottom"></span>
@@ -63,9 +60,36 @@ if (is_home() && get_option('page_for_posts')) {
     </div>
 </header>
 <!-- header part end -->
-
+<!-- off canvus menu -->
+<div class="off_canvus_menu">
+    <div class="off_canvus_menu_iner">
+        <div class="off_canvus_menu_iner_logo">
+            <?php ageland_logo('off_canvus_logo'); ?>
+            <div class="popup-close-button close_icon">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="off_canvus_menu_iner_content">
+            <nav class="navbar">
+                <?php
+                echo str_replace(['menu-item-has-children', 'sub-menu'], ['dropdown', 'dropdown-menu'],
+                    wp_nav_menu( array(
+                            'container' => false,
+                            'echo' => false,
+                            'menu_id' => 'main-menu',
+                            'theme_location' => 'primary',
+                            'fallback_cb'=> 'ageland_no_main_nav',
+                            'items_wrap' => '<ul class="navbar-nav">%3$s</ul>',
+                        )
+                    ));
+                ?>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="offcanvas_overlay"></div>
 <!--broadcramp-->
-<header class="inner_broadcramp" data-background="<?php echo get_template_directory_uri(); ?>/assets/img/breadcrumb-bg.jpg">
+<header class="inner_broadcramp">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

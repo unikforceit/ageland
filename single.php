@@ -6,7 +6,7 @@
  *
  */
 get_header();
-if ( is_active_sidebar( 'sidebar-1' ) ) {
+if (is_active_sidebar('sidebar-1')) {
     $main = 'col-lg-8';
     $sidebar = 'col-lg-4';
 } else {
@@ -15,29 +15,36 @@ if ( is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
     <!-- blog area five start here  -->
-    <section class="single-blog-page section">
+    <section class="blog_details_main">
         <div class="container">
             <div class="row">
-                <div class="<?php echo esc_attr($main);?> html-element-fix">
-                    <?php if ( have_posts() ) :
+                <div class="<?php echo esc_attr($main); ?>">
+                    <div class="blog_details_single_p">
+                        <?php if (have_posts()) :
 
-                        /* Start the Loop */
-                        while ( have_posts() ) : the_post();
+                            /* Start the Loop */
+                            while (have_posts()) : the_post();
 
-                            get_template_part( 'template-parts/singlecontent');
+                                get_template_part('template-parts/singlecontent');
 
-                        endwhile;
-                    else :
+                            endwhile;
+                        else :
 
-                        get_template_part( 'template-parts/content', 'none' );
+                            get_template_part('template-parts/content', 'none');
 
-                    endif; ?>
+                        endif; ?>
+                    </div>
+                    <?php
+                    if (comments_open() || get_comments_number()) :
+                        comments_template();
+                    endif;
+                    ?>
                 </div>
-                <div class="<?php echo esc_attr($sidebar);?>">
+                <div class="<?php echo esc_attr($sidebar); ?>">
                     <?php get_template_part('layouts/sidebar', 'right'); ?>
                 </div>
             </div>
         </div>
     </section>
 
-<?php get_footer();?>
+<?php get_footer(); ?>

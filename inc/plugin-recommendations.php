@@ -9,7 +9,7 @@ function ageland_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name' => esc_attr__('ageland Addon','ageland'),
+			'name' => esc_attr__('Ageland Addon','ageland'),
 			'slug' => 'ageland-addon',
 			'source' => get_template_directory_uri() . '/plugin/ageland-addon.zip',
 			'required' => true,
@@ -26,7 +26,7 @@ function ageland_register_required_plugins() {
 			'force_deactivation' => false,
 		),
         array(
-			'name' => esc_attr__('ageland Demo Importer','ageland'),
+			'name' => esc_attr__('Ageland Demo Importer','ageland'),
 			'slug'=> 'one-click-demo-import',
 			'required' => true,
 			'force_activation'=> false,
