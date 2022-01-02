@@ -34,11 +34,13 @@ if (is_active_sidebar('sidebar-1')) {
 
                         endif; ?>
                     </div>
-                    <?php
-                    if (comments_open() || get_comments_number()) :
-                        comments_template();
-                    endif;
-                    ?>
+                    <div class="ageland-comment-box">
+                        <?php
+                        if (comments_open() || get_comments_number()) :
+                            comments_template();
+                        endif;
+                        ?>
+                    </div>
                 </div>
                 <div class="<?php echo esc_attr($sidebar); ?>">
                     <?php get_template_part('layouts/sidebar', 'right'); ?>

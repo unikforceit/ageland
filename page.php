@@ -24,7 +24,7 @@ get_header();
 
                         get_template_part('template-parts/content', 'page');
                         ?>
-                        <div class="ageland-single-comment">
+                        <div class="ageland-comment-box">
                             <?php
                             if (comments_open() || get_comments_number()) :
                                 comments_template();
