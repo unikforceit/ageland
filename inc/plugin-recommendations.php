@@ -9,9 +9,9 @@ function ageland_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name' => esc_attr__('Ageland Addon','ageland'),
-			'slug' => 'ageland-addon',
-			'source' => get_template_directory_uri() . '/plugin/ageland-addon.zip',
+			'name' => esc_attr__('Ageland Core','ageland'),
+			'slug' => 'ageland-core',
+			'source' => get_template_directory_uri() . '/plugin/ageland-core.zip',
 			'required' => true,
 			'version' => '1.0.0',
 			'force_activation' => false,
