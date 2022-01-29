@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: ageland Builder
+ * Template Name: Ageland Builder
  *
  * @package WordPress
  * @subpackage ageland

@@ -82,7 +82,7 @@
     $("[data-bg-img]").each(function() {
         var bg = $(this).data("bg-img");
         $(this).css({
-            "background": "no-repeat center/cover url(" + bg + ")",
+            "background-image": "url(" + bg + ")",
         })
     })
 

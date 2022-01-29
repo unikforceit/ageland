@@ -89,7 +89,7 @@ if (is_home() && get_option('page_for_posts')) {
 </div>
 <div class="offcanvas_overlay"></div>
 <!--broadcramp-->
-<header class="inner_broadcramp">
+<header class="inner_broadcramp" data-bg-img="<?php echo get_template_directory_uri().'/assets/img/banner.jpg'?>">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

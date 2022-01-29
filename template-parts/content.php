@@ -24,7 +24,7 @@
                             <a href="<?php the_permalink();?>#comment"><i class="fas fa-comment-alt"></i> <?php echo get_comments_number(); ?> <?php echo esc_html('Comments')?></a>
                         </li>
                         <li>
-                            <p><?php echo get_avatar( get_the_author_meta('ID')); ?> <?php echo esc_html('by')?> <a href="<?php echo get_author_posts_url(get_the_author_meta('ID'))?>"><?php echo get_the_author()?></a>
+                            <p><?php echo get_avatar( get_the_author_meta('ID'), 30); ?> <?php echo esc_html('by')?> <a href="<?php echo get_author_posts_url(get_the_author_meta('ID'))?>"><?php echo get_the_author()?></a>
                             </p>
                         </li>
                     </ul>
