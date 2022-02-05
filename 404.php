@@ -12,24 +12,21 @@ if ($opt_404_page){
     echo do_shortcode('[INSERT_ELEMENTOR id="' . $opt_404_page . '"]');
 }else {
 ?>
-
-    <div id="primary" class="container">
-        <main id="main" class="fw-row">
-
-            <section class="error-404 not-found">
-                <header>
-                    <h1><?php esc_html_e('Sorry the page you are looking does not exist', 'ageland'); ?></h1>
-                </header><!-- .page-header -->
-
-                <div class="blog-sidebar">
-                    <div class="widget_search">
-                        <?php the_widget('WP_Widget_Search'); ?>
+    <!--404 main_page-->
+    <div class="error_page_main_con">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="inside">
+                        <img src="<?php echo get_template_directory_uri()?>/assets/img/404.png" alt="#" />
+                        <h4><?php echo esc_html("Something went wrong Page Can't Found");?></h4>
+                        <a href="<?php echo esc_url( home_url( '/' ) );?>" class="btn"><?php echo esc_html('Back to Home');?></a>
                     </div>
-                </div><!-- .page-content -->
-            </section><!-- .error-404 -->
-
-        </main><!-- #main -->
-    </div><!-- #primary -->
-
+                </div>
+            </div>
+        </div>
+        <!--/.container-->
+    </div>
+    <!--404 main_page-->
     <?php }
     get_footer();

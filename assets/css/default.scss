@@ -326,6 +326,15 @@ object {
     cursor: pointer;
     z-index: 1;
   }
+  button.wp-block-search__button {
+    position: initial;
+    background: #3043ef;
+    padding: 0px 20px;
+    color: #fff;
+  }
+  .wp-block-search__inside-wrapper{
+    position: relative;
+  }
 }
 
 .blog-side-bar .widget_search i {
@@ -397,6 +406,7 @@ ol.wp-block-latest-comments {
   right: 0;
 }
 
+.widget_block li a,
 .widget_categories li a,
 .widget_archive li a,
 .wp-block-archives li a,
@@ -955,48 +965,6 @@ th, td {
 }
 
 .wp-calendar-nav a {
-  background: #eee;
-  color: black;
-  padding: 2px 7px;
-  margin-bottom: 5px;
-  display: inline-block;
-  font-size: 13px;
-}
-
-.wp-block-latest-comments .wp-block-latest-comments__comment,
-.wp-block-latest-posts a,
-.wp-block-rss a {
-  display: block;
-  color: #666666;
-  text-transform: capitalize;
-  border-bottom: 1px solid #cccccc;
-  padding: 12px 0;
-  line-height: 1.556;
-
-  &:hover {
-    color: var(--primary-color);
-  }
-}
-
-.wp-block-latest-comments .wp-block-latest-comments__comment a {
-  color: #666666;
-}
-
-.wp-block-latest-comments__comment {
-  margin: 0;
-  line-height: inherit;
-}
-
-.wp-block-latest-posts,
-.wp-block-rss {
-  padding: 0
-}
-
-.wp-block-latest-posts li {
-  margin-bottom: 10px;
-}
-
-.wp-block-tag-cloud a {
   background: #eee;
   color: black;
   padding: 2px 7px;

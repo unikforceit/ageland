@@ -325,6 +325,15 @@ object {
   cursor: pointer;
   z-index: 1;
 }
+.widget_search button.wp-block-search__button, .widget_block.widget_search button.wp-block-search__button {
+  position: initial;
+  background: #3043ef;
+  padding: 0px 20px;
+  color: #fff;
+}
+.widget_search .wp-block-search__inside-wrapper, .widget_block.widget_search .wp-block-search__inside-wrapper {
+  position: relative;
+}
 
 .blog-side-bar .widget_search i {
   line-height: inherit;
@@ -393,6 +402,7 @@ ol.wp-block-latest-comments {
   right: 0;
 }
 
+.widget_block li a,
 .widget_categories li a,
 .widget_archive li a,
 .wp-block-archives li a,
@@ -413,6 +423,7 @@ ol.wp-block-latest-comments {
   display: inline-block;
   margin-bottom: 10px;
 }
+.widget_block li a:after,
 .widget_categories li a:after,
 .widget_archive li a:after,
 .wp-block-archives li a:after,
@@ -429,6 +440,7 @@ ol.wp-block-latest-comments {
   border-radius: 50%;
   background-color: #cccccc;
 }
+.widget_block li a:hover,
 .widget_categories li a:hover,
 .widget_archive li a:hover,
 .wp-block-archives li a:hover,
@@ -439,6 +451,7 @@ ol.wp-block-latest-comments {
   color: #3043ef;
   margin-left: 16px;
 }
+.widget_block li a:hover:after,
 .widget_categories li a:hover:after,
 .widget_archive li a:hover:after,
 .wp-block-archives li a:hover:after,
@@ -950,49 +963,6 @@ th, td {
 }
 
 .wp-calendar-nav a {
-  background: #eee;
-  color: black;
-  padding: 2px 7px;
-  margin-bottom: 5px;
-  display: inline-block;
-  font-size: 13px;
-}
-
-.wp-block-latest-comments .wp-block-latest-comments__comment,
-.wp-block-latest-posts a,
-.wp-block-rss a {
-  display: block;
-  color: #666666;
-  text-transform: capitalize;
-  border-bottom: 1px solid #cccccc;
-  padding: 12px 0;
-  line-height: 1.556;
-}
-.wp-block-latest-comments .wp-block-latest-comments__comment:hover,
-.wp-block-latest-posts a:hover,
-.wp-block-rss a:hover {
-  color: var(--primary-color);
-}
-
-.wp-block-latest-comments .wp-block-latest-comments__comment a {
-  color: #666666;
-}
-
-.wp-block-latest-comments__comment {
-  margin: 0;
-  line-height: inherit;
-}
-
-.wp-block-latest-posts,
-.wp-block-rss {
-  padding: 0;
-}
-
-.wp-block-latest-posts li {
-  margin-bottom: 10px;
-}
-
-.wp-block-tag-cloud a {
   background: #eee;
   color: black;
   padding: 2px 7px;

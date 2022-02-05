@@ -93,4 +93,6 @@
         })
     })
 
+    $(".widget_block h2, .widget_block .wp-block-search__label").after("<div class='line'</div>")
+
 })(jQuery);

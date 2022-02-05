@@ -142,6 +142,7 @@ function ageland_scripts() {
 	wp_enqueue_style('ageland-fonts',  ageland_fonts_url());
 	wp_enqueue_style('ageland-all', get_template_directory_uri() . '/assets/css/all.css');
 	wp_enqueue_style('ageland-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
+	wp_enqueue_style('ageland-animation-spin', get_template_directory_uri() . '/assets/css/animation-spin.css');
     wp_enqueue_style('ageland-normalize', get_template_directory_uri() . '/assets/css/normalize.css');
     wp_enqueue_style('ageland-ageland', get_template_directory_uri() . '/assets/css/ageland.css');
     wp_enqueue_style('ageland-default', get_template_directory_uri() . '/assets/css/default.css');
