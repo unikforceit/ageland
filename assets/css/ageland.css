@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  * Title:  Naive Digital Agency
  * Author: MIDEDGE
@@ -946,7 +947,7 @@ a:hover {
 }
 .header_part.classic_header .navbar .dropdown::after {
   display: inline-block;
-  content: "\f078";
+  content: "";
   border-top: transparent;
   font-family: "Font Awesome 5 Free";
   vertical-align: middle;
@@ -1191,7 +1192,7 @@ a:hover {
 
 .off_canvus_menu .dropdown::after {
   display: inline-block;
-  content: "\f078";
+  content: "";
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
   font-size: 12px;
@@ -1216,11 +1217,11 @@ a:hover {
 }
 
 .off_canvus_menu .show > .dropdown-toggle::after {
-  content: "\f106";
+  content: "";
 }
 
 .off_canvus_menu .active_icon::after {
-  content: "\e648";
+  content: "";
 }
 
 /******** off canvus menu css end *********/
