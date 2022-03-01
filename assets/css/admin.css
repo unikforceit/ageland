@@ -1,12 +1,14 @@
-a{
+a {
     text-decoration: none;
 }
+
 .ageland-wrap label {
     font-size: 16px;
     margin: 15px 0px;
     display: block;
     font-weight: 600;
 }
+
 .ageland-wrap input {
     width: 100%;
     border: none;
@@ -14,14 +16,16 @@ a{
     padding: 0px 30px;
     background-color: #eeeeee;
 }
+
 .about-wrap.ageland-wrap .nav-tab.nav-tab-active {
     margin-bottom: -2px;
     background: 0 0;
     outline: 0;
     border: none;
-    border-bottom: 2px solid #6541c1 ;
-    color: #6541c1 ;
+    border-bottom: 2px solid #6541c1;
+    color: #6541c1;
 }
+
 .about-wrap.ageland-wrap .nav-tab {
     float: left;
     border: none;
@@ -35,55 +39,66 @@ a{
     margin-left: 0;
     margin-right: .5em;
 }
+
 .ageland-system-stats {
     background: #fff;
     padding: 10px 30px 50px;
     border-radius: 3px;
     margin-top: 20px;
     color: #000;
-    webkit-box-shadow: 0 5px 40px 0 rgba(10,10,25,.1);
-    -moz-box-shadow: 0 5px 40px 0 rgba(10,10,25,.1);
-    box-shadow: 0 5px 40px 0 rgba(10,10,25,.1);
+    webkit-box-shadow: 0 5px 40px 0 rgba(10, 10, 25, .1);
+    -moz-box-shadow: 0 5px 40px 0 rgba(10, 10, 25, .1);
+    box-shadow: 0 5px 40px 0 rgba(10, 10, 25, .1);
 }
+
 .system-status-table tr td {
     padding: 10px 0;
     border-bottom: 1px solid #eee;
 }
+
 .system-status-table {
     width: 100%;
 }
+
 .ageland-inactive, mark.error {
-    background-color: rgba(230,30,31,.1);
+    background-color: rgba(230, 30, 31, .1);
     color: #e61e1f;
 }
+
 .nav-tab-active, .nav-tab-active:focus, .nav-tab-active:focus:active, .nav-tab-active:hover {
     border-bottom: 1px solid #f1f1f1;
     background: #f1f1f1;
     color: #000;
 }
+
 .about-wrap .about-description, .about-wrap .about-text {
     margin-top: 1.4em;
     font-weight: 400;
     line-height: 1.6;
     font-size: 19px;
 }
+
 li#toplevel_page_ageland-admin-menu > a {
-    background: -webkit-gradient(left top,right top,color-stop(0,#6541c1),color-stop(98%,#d43396),color-stop(100%,#d43396));
-    background: -webkit-gradient(linear,left top,right top,from(#6541c1),color-stop(98%,#d43396),to(#d43396));
-    background: linear-gradient(to right,#6541c1 0,#d43396 98%,#d43396 100%) !important;
+    background: -webkit-gradient(left top, right top, color-stop(0, #6541c1), color-stop(98%, #d43396), color-stop(100%, #d43396));
+    background: -webkit-gradient(linear, left top, right top, from(#6541c1), color-stop(98%, #d43396), to(#d43396));
+    background: linear-gradient(to right, #6541c1 0, #d43396 98%, #d43396 100%) !important;
 }
+
 li#toplevel_page_ageland-admin-menu > a:hover {
     color: #fff !important;
 }
+
 li#toplevel_page_ageland-admin-menu ul li:hover a {
-    background: -webkit-gradient(left top,right top,color-stop(0,#6541c1),color-stop(98%,#d43396),color-stop(100%,#d43396));
-    background: -webkit-gradient(linear,left top,right top,from(#6541c1),color-stop(98%,#d43396),to(#d43396));
-    background: linear-gradient(to right,#6541c1 0,#d43396 98%,#d43396 100%) !important;
+    background: -webkit-gradient(left top, right top, color-stop(0, #6541c1), color-stop(98%, #d43396), color-stop(100%, #d43396));
+    background: -webkit-gradient(linear, left top, right top, from(#6541c1), color-stop(98%, #d43396), to(#d43396));
+    background: linear-gradient(to right, #6541c1 0, #d43396 98%, #d43396 100%) !important;
     color: #fff !important;
 }
-li#toplevel_page_ageland-admin-menu .wp-submenu.wp-submenu-wrap{
+
+li#toplevel_page_ageland-admin-menu .wp-submenu.wp-submenu-wrap {
     background-color: #000000 !important;
 }
+
 a.active-btn.button-primary {
     background: red;
     border: none;
@@ -91,6 +106,7 @@ a.active-btn.button-primary {
     text-align: center;
     font-size: 26px;
 }
-.text-center{
+
+.text-center {
     text-align: center !important;
 }

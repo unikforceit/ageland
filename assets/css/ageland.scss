@@ -3482,11 +3482,13 @@ Start Blog sec style
   font-weight: 500;
   color: #383866;
 }
-.single_blog_in .card-body ul li p img{
+
+.single_blog_in .card-body ul li p img {
   border-radius: 50%;
   margin-right: 8px;
   float: left;
 }
+
 .single_blog_in .card-body ul li a i {
   padding-right: 7px;
 }
@@ -5803,6 +5805,7 @@ Start Blog page style
   padding: 24px 40px;
   margin-bottom: 40px;
 }
+
 .widget_block .wp-block-search__label,
 .widget_block h2,
 .widgets .widget-title {

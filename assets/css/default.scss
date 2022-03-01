@@ -326,13 +326,15 @@ object {
     cursor: pointer;
     z-index: 1;
   }
+
   button.wp-block-search__button {
     position: initial;
     background: #3043ef;
     padding: 0px 20px;
     color: #fff;
   }
-  .wp-block-search__inside-wrapper{
+
+  .wp-block-search__inside-wrapper {
     position: relative;
   }
 }
