@@ -18,7 +18,7 @@
             <img src="<?php echo get_template_directory_uri();?>/assets/img/service4bg_hv.png" class="hide" alt="BG hover" />
         </div>
         <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
-        <p><?php the_excerpt();?></p>
+        <p><?php echo wp_trim_words(get_the_excerpt(), 14, '.');?></p>
     </div>
     <!--/.single_service_page-->
 </div>

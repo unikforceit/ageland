@@ -6452,7 +6452,7 @@ Start Services page style
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   color: #383866;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .single_service_page p {
@@ -6732,6 +6732,8 @@ Start Case studies page style
 
 .single_case_page .card img {
   border-radius: 10px 10px 0 0;
+  height: 250px;
+  object-fit: cover;
 }
 
 .single_case_page .card {
@@ -6813,6 +6815,216 @@ Start Case studies page style
   padding-bottom: 90px;
   position: relative;
   z-index: 1;
+}
+
+.ageland-comment-box {
+  padding-top: 50px;
+}
+
+.comment-wrap .comment-title {
+  padding-bottom: 14px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  color: #383866;
+  font-size: 24px;
+  position: relative;
+}
+
+.comment .article {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 33px;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 24px;
+}
+
+.comment .article .author-pic {
+  margin-right: 10px;
+}
+
+.comment .article .author-pic img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.comment .article .details .author-meta {
+  display: flex;
+  align-items: center;
+}
+
+.comment .article .details .author-meta .name,
+.comment .article .details .author-meta .date {
+  padding-right: 10%;
+}
+
+.comment .article .details .author-meta .name h4,
+.comment .article .details .author-meta .date span {
+  display: inline-block;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #383866;
+  text-transform: capitalize;
+}
+
+.comment .article .details p {
+  padding-top: 14px;
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  color: #383866;
+  font-size: 14px;
+}
+
+.comment .article .details a.comment-reply-link {
+  padding: 12px 32px;
+  background-color: #3043ef;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 1px solid #3043ef;
+  margin-top: 24px;
+  text-transform: uppercase;
+  box-shadow: 0px 15px 20px 0px rgba(48, 67, 239, 0.15);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.comment .children {
+  padding-left: 50px;
+}
+
+.comment .children .comment .article {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 33px;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 24px;
+}
+
+.comment .children .comment .article .author-pic {
+  margin-right: 10px;
+}
+
+.comment .children .comment .article .author-pic img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.comment .children .comment .article .details {
+  width: 100%;
+}
+
+.comment .children .comment .article .details .author-meta {
+  display: flex;
+  align-items: center;
+}
+
+.comment .children .comment .article .details .author-meta .name,
+.comment .children .comment .article .details .author-meta .date {
+  padding-right: 10%;
+}
+
+.comment .children .comment .article .details .author-meta .name h4,
+.comment .children .comment .article .details .author-meta .date span {
+  display: inline-block;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #383866;
+  text-transform: capitalize;
+}
+
+.comment .children .comment .article .details p {
+  padding-top: 14px;
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  color: #383866;
+  font-size: 14px;
+}
+
+.comment .children .comment .article .details a.comment-reply-link {
+  padding: 12px 32px;
+  background-color: #3043ef;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 1px solid #3043ef;
+  margin-top: 24px;
+  text-transform: uppercase;
+  box-shadow: 0px 15px 20px 0px rgba(48, 67, 239, 0.15);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.comments .comment-respond {
+  padding-top: 50px;
+}
+
+.comments .comment-respond h3 {
+  padding-bottom: 14px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  color: #383866;
+  font-size: 24px;
+  position: relative;
+}
+
+.comments .comment-respond form p.logged-in-as {
+  padding-top: 26px;
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  color: #383866;
+  font-size: 14px;
+}
+
+.comments .comment-respond form .comment-form-comment textarea {
+  width: 100%;
+  padding: 14px 22px;
+  outline: 0;
+  border: 1px solid #cccccc;
+  margin-top: 24px;
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  color: #666666;
+  font-size: 14px;
+}
+
+.comments .comment-respond form .form-submit {
+  padding: 12px 32px;
+  background-color: #3043ef;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 1px solid #3043ef;
+  margin-top: 24px;
+  text-transform: uppercase;
+  box-shadow: 0px 15px 20px 0px rgba(48, 67, 239, 0.15);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.comments .comment-respond form .form-submit input {
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 /*.case_single_details:after {

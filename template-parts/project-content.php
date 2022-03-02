@@ -14,7 +14,7 @@
             endif; ?>
             <div class="card-body">
                 <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
-                <p><?php the_excerpt();?></p>
+                <p><?php echo wp_trim_words(get_the_excerpt(), 20, '.');?></p>
                 <a href="<?php the_permalink();?>" class="btn"><?php echo __('Read More', 'ageland')?></a>
             </div>
         </div>
