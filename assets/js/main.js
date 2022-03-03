@@ -9,17 +9,33 @@
     $(window).on('scroll', function() {
         var window_top = $(window).scrollTop() + 0;
         if (window_top > 150) {
-            $('.classic_header').addClass('menu_fixed');
+            $('.classic_header, .ageland-sticky-header').addClass('menu_fixed');
         } else {
-            $('.classic_header').removeClass('menu_fixed');
+            $('.classic_header, .ageland-sticky-header').removeClass('menu_fixed');
         }
+    });
+
+    //scroll top
+    $(window).on('scroll', function() {
+        $(window).on("scroll", function() {
+            var ScrollBarPosition = $(this).scrollTop();
+            if (ScrollBarPosition > 200) {
+                $(".scroll-top").fadeIn();
+            } else {
+                $(".scroll-top").fadeOut();
+            }
+        });
+        $(".scroll-top").on("click", function() {
+            $('body,html').animate({
+                scrollTop: 0,
+            });
+        })
     });
 
     /*=========================== close scroll background ===========================*/
 
     $(window).on('load', function() {
-        $(".preloder_part").fadeOut();
-        $(".sk-child").delay(1000).fadeOut("slow");
+     $(".preloader").delay(1000).fadeOut("slow");
     });
 
     //offcanvus menu js

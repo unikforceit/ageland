@@ -189,6 +189,8 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/plug-dependent.php';
 
+require get_template_directory() . '/helper/customiser-extra.php';
+
 /**
  * Load plugin recommendation.
  */
