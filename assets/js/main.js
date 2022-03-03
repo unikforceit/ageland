@@ -35,7 +35,7 @@
     /*=========================== close scroll background ===========================*/
 
     $(window).on('load', function() {
-     $(".preloader").delay(1000).fadeOut("slow");
+     $(".preloader").fadeOut("slow");
     });
 
     //offcanvus menu js
