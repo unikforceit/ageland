@@ -13,7 +13,7 @@
                 <div class="images">
                     <a href="<?php echo esc_url( get_permalink() )?>"><?php the_post_thumbnail('full'); ?></a>
                     <div class="dates">
-                        <p><?php the_date('M Y')?></p>
+                        <p><?php echo get_the_date('M Y')?></p>
                     </div>
                 </div>
                 <?php endif; ?>

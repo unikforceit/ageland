@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -1273,7 +1274,7 @@ a:hover {
   top: 0;
   right: 9px;
   font-size: 11px;
-  content: "\f543";
+  content: "";
   color: #fff;
   position: absolute;
   -webkit-transition: 0.3s all ease-in-out;
@@ -1294,7 +1295,7 @@ i.b-icon {
 
 .checkerbody .ageland-blog-left.sticky h2:before {
   font-family: dashicons;
-  content: "\f109";
+  content: "";
   display: inline-block;
   padding-right: 3px;
   vertical-align: middle;
