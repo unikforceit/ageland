@@ -29,8 +29,8 @@
                         </li>
                     </ul>
                     <h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-                    <p><?php the_excerpt();?></p>
-                    <a href="<?php the_permalink();?>" class="btn"><?php echo __('reads more', 'ageland')?></a>
+                    <p><?php echo get_the_excerpt();?></p>
+                    <a href="<?php the_permalink();?>" class="btn"><?php echo __('read more', 'ageland')?></a>
                 </div>
             </div>
         </div>
