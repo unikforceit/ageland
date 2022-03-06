@@ -49,7 +49,7 @@ function ageland_unit_breadcumb($separator = '/') {
     $text['404']      = 'Error 404'; // text for the 404 page
     $text['page']     = 'Page %s'; // text 'Page N'
     $text['cpage']    = 'Comment Page %s'; // text 'Comment Page N'
-    $wrap_before    = '<ul class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
+    $wrap_before    = '<ul class="breadcrumbs">'; // the opening wrapper tag
     $wrap_after     = '</ul><!-- .breadcrumbs -->'; // the closing wrapper tag
     $sep            = '<li class="breadcrumbs__separator"> '.$separator.' </li>'; // separator between crumbs
     $before         = '<li class="breadcrumbs__current">'; // tag before the current crumb
@@ -61,9 +61,9 @@ function ageland_unit_breadcumb($separator = '/') {
     /* === END OF OPTIONS === */
     global $post;
     $home_url       = home_url('/');
-    $link           = '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">';
-    $link          .= '<a class="breadcrumbs__link" href="%1$s" itemprop="item"><span itemprop="name">%2$s</span></a>';
-    $link          .= '<meta itemprop="position" content="%3$s" />';
+    $link           = '<li>';
+    $link          .= '<a class="breadcrumbs__link" href="%1$s"><span>%2$s</span></a>';
+    $link          .= '';
     $link          .= '</li>';
     $parent_id      = ( $post ) ? $post->post_parent : '';
     $home_link      = sprintf( $link, $home_url, $text['home'], 1 );
