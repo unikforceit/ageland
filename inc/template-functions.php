@@ -178,35 +178,24 @@ function ageland_no_main_nav( $args ) {
 }
 
 function ageland_navigation(){
+    $related_query = new WP_Query(array(
+        'post_type' => 'post',
+        'category__in' => wp_get_post_categories(get_the_ID()),
+        'post__not_in' => array(get_the_ID()),
+        'posts_per_page' => 3,
+        'orderby' => 'date',
+    ));
+        if ($related_query->have_posts()) { ?>
+        <ul class="related_article">
+            <?php while ($related_query->have_posts()) {
+                $related_query->the_post();
+                ?>
+                <li><a href="<?php the_permalink();?>"><?php the_title();?></a></li>
+           <?php } ?>
+            <?php wp_reset_postdata(); ?>
+         </ul>
+        <?php }
 
-	if ( ageland_theme_option('enb_single_nav') ) {
-
-		do_action('ageland_single_navigation');
-
-	} else { ?>
-        <?php
-        $prev = get_previous_post(true);
-        $next = get_next_post(true);
-
-        if ($prev) {?>
-            <div class="pagination-item previous-page">
-                <a href="<?php echo get_permalink( $prev->ID ); ?>">
-                    <i class="pagination-arrow fas fa-long-arrow-alt-left"></i>
-                    <h4 class="pagination-text">Previous Post</h4>
-                    <h3 class="post-title"><?php echo wp_trim_words(get_the_title( $prev->ID ), 6); ?></h3>
-                </a>
-            </div>
-        <?php } if ($next) {?>
-            <div class="pagination-item next-page">
-                <a href="<?php echo get_permalink( $next->ID ); ?>">
-                    <i class="pagination-arrow fas fa-long-arrow-alt-right"></i>
-                    <h4 class="pagination-text">Next Post</h4>
-                    <h3 class="post-title"><?php echo wp_trim_words(get_the_title( $next->ID ), 6); ?></h3>
-                </a>
-            </div>
-        <?php }?>
-
-    <?php }
 }
 
 function ageland_numeric_posts_nav() {
@@ -420,4 +409,11 @@ function display_read_time() {
     $read_time = ceil($count_words / 250);
 
     return $read_time;
+}
+add_filter('pre_get_posts', 'ageland_project_archive');
+function ageland_project_archive($query){
+    if (is_post_type_archive('project')) {
+        $query->set('posts_per_page', 6);
+    }
+    return $query;
 }

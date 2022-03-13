@@ -5432,7 +5432,7 @@ Start About page style
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   color: #383866;
-  font-size: 30px;
+  font-size: 36px;
   line-height: 1.3em;
 }
 
@@ -6567,7 +6567,7 @@ Start Service single page style
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   color: #3043ef;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .single_details_service_p p {
@@ -7104,7 +7104,7 @@ Start Case studies page style
   font-weight: 500;
   font-size: 18px;
   color: #383866;
-  font-size: 30px;
+  font-size: 24px;
   position: relative;
   padding-bottom: 20px;
 }

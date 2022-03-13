@@ -27,21 +27,15 @@
                 <?php the_content(); ?>
             </div>
             <div class="related-blog-post">
-                <h4>Related Article.</h4>
-                <ul class="related_article">
-                    <li><a href="#">1. Warches into stiff sections. The bedding was hardly able
-                            to cover</a></li>
-                    <li><a href="#">2. Mit and seemed ready to slide off any moment.</a></li>
-                    <li><a href="#">3. His many legs, pitifully thin compared with the size of
-                            the rest of him, waved about</a></li>
-                </ul>
+                <h4><?php echo esc_html('Related Article.');?></h4>
+                <?php ageland_navigation();?>
             </div>
         </div>
     </div>
 </div>
 <div class="post_share_btn">
     <ul>
-        <li>Share This Post:</li>
+        <li><?php echo esc_html('Share This Post:');?></li>
         <li><a href="#" class="fb"><i class="fab fa-facebook-f"></i></a></li>
         <li><a href="#" class="tw"><i class="fab fa-twitter"></i></a></li>
         <li><a href="#" class="in"><i class="fab fa-instagram"></i></a></li>

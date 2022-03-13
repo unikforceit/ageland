@@ -35,7 +35,7 @@ get_header();
                         <?php ageland_pagination(); ?>
                     </div>
                     <!--/.pagination-post-->
-                </div>
+                    </div>
             </div>
         </div>
         <!--/.container-->
