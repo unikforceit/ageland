@@ -8,13 +8,13 @@
         <div class="project_details">
             <h4>Project Details</h4>
             <ul>
-                <li>Date: <span>11/10/2018</span></li>
-                <li>skills Needed: <span>Html/CSS Web design</span></li>
-                <li>Technologies: <span>Adobe Photoshop Cc 2019</span></li>
-                <li>Live Project: <span>www.spellbit.com</span></li>
-                <li>Created By: <span>Tonmoy Khan</span></li>
-                <li>Client Name: <span>Crist Deo</span></li>
-                <li>Project Type: <span>illustration Vector</span></li>
+                <li><?php wp_kses_post('Date: <span>11/10/2018</span>')?></li>
+                <li><?php wp_kses_post('skills Needed: <span>Html/CSS Web design</span>')?></li>
+                <li><?php wp_kses_post('Technologies: <span>Adobe Photoshop Cc 2019</span>')?></li>
+                <li><?php wp_kses_post('Live Project: <span>www.spellbit.com</span>')?></li>
+                <li><?php wp_kses_post('Created By: <span>Tonmoy Khan</span>')?></li>
+                <li><?php wp_kses_post('Client Name: <span>Crist Deo</span>')?></li>
+                <li><?php wp_kses_post('Project Type: <span>illustration Vector</span>')?></li>
             </ul>
         </div>
         <!--/.project_details-->
