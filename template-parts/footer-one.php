@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="copyright_text">
-                    <p>© 2021 UnikForce IT, all rights reserved.</p>
+                    <p><?php echo esc_html('&copy; 2021 UnikForce IT, all rights reserved.')?></p>
                 </div>
                 <!--/.copyright_text-->
             </div>
