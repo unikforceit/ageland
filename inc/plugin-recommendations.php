@@ -49,7 +49,7 @@ function ageland_register_required_plugins() {
         'has_notices' => true, 
         'dismissable' => true,
         'dismiss_msg' => '',
-        'is_automatic' => true,
+        'is_automatic' => false,
         'message'=> '',
     );
 
