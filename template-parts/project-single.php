@@ -6,15 +6,15 @@
     </div>
     <div class="col-md-4">
         <div class="project_details">
-            <h4>Project Details</h4>
+            <h4><?php echo esc_html('Project Details')?></h4>
             <ul>
-                <li><?php wp_kses_post('Date: <span>11/10/2018</span>')?></li>
-                <li><?php wp_kses_post('skills Needed: <span>Html/CSS Web design</span>')?></li>
-                <li><?php wp_kses_post('Technologies: <span>Adobe Photoshop Cc 2019</span>')?></li>
-                <li><?php wp_kses_post('Live Project: <span>www.spellbit.com</span>')?></li>
-                <li><?php wp_kses_post('Created By: <span>Tonmoy Khan</span>')?></li>
-                <li><?php wp_kses_post('Client Name: <span>Crist Deo</span>')?></li>
-                <li><?php wp_kses_post('Project Type: <span>illustration Vector</span>')?></li>
+                <li><?php echo wp_kses_post('Date: <span>11/10/2018</span>')?></li>
+                <li><?php echo wp_kses_post('skills Needed: <span>Html/CSS Web design</span>')?></li>
+                <li><?php echo wp_kses_post('Technologies: <span>Adobe Photoshop Cc 2019</span>')?></li>
+                <li><?php echo wp_kses_post('Live Project: <span>www.spellbit.com</span>')?></li>
+                <li><?php echo wp_kses_post('Created By: <span>Tonmoy Khan</span>')?></li>
+                <li><?php echo wp_kses_post('Client Name: <span>Crist Deo</span>')?></li>
+                <li><?php echo wp_kses_post('Project Type: <span>illustration Vector</span>')?></li>
             </ul>
         </div>
         <!--/.project_details-->
