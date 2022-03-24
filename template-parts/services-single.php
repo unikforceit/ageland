@@ -11,7 +11,7 @@
         <?php if ( has_post_thumbnail()) :
             the_post_thumbnail('full');
         endif; ?>
-        <h3><?php the_title(); ?></h3>
+        <div style="padding-top: 50px;"></div>
         <?php the_excerpt();?>
 
     </div>

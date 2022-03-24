@@ -130,8 +130,8 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-}
 
+}
 article,
 aside,
 details,
@@ -1026,7 +1026,7 @@ a:hover {
 
 .logged-in .ageland-sticky-header.menu_fixed,
 .logged-in .header_part.menu_fixed {
-  top: 32px;
+  top: 0px;
 }
 
 .header_part.menu_fixed .header_right_option .burger_icon {
@@ -1184,7 +1184,7 @@ a:hover {
   color: rgba(255, 255, 255, 0.1);
 }
 
-.off_canvus_menu .dropdown::after {
+.off_canvus_menu .dropdown > a::after {
   display: inline-block;
   content: "\f078";
   font-weight: 900;
@@ -3782,7 +3782,7 @@ Start Responsive style
     padding-top: 90px;
   }
   .case_title {
-    padding-top: 40px;
+    padding-top: 65px;
   }
   #price_tables {
     height: 400px;
@@ -5466,6 +5466,7 @@ Start About page style
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   font-size: 36px;
+  line-height: 1.2;
 }
 
 .broadcramp_inside_hdr ul li {
@@ -7131,7 +7132,6 @@ Start Case studies page style
 
 .main_content_tx {
   width: 100%;
-  padding-top: 50px;
 }
 
 .main_content_tx h2 {
@@ -7176,7 +7176,9 @@ Start Case studies page style
   -moz-box-shadow: 0px 0px 9px 0px rgba(102, 102, 102, 0.2);
   box-shadow: 0px 0px 9px 0px rgba(102, 102, 102, 0.2);
 }
-
+.case_single_details .smaple_text{
+  padding: 0px 15px;
+}
 .case_single_details .smaple_text h3 {
   font-family: "Work Sans", sans-serif;
   font-weight: 500;

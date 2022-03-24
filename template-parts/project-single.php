@@ -22,7 +22,6 @@
     <div class="w-100"></div>
     <div class="col-md-12">
         <div class="main_content_tx">
-            <h2><?php the_title();?></h2>
             <?php the_excerpt();?>
         </div>
         <!--/.main_content_tx-->
