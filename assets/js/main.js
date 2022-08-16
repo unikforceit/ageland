@@ -1,114 +1,202 @@
-(function($) {
+/* -----------------------------------------------------------------------------
+File:           JS Core
+Version:        1.0
+Last change:    00/00/00 
+-------------------------------------------------------------------------------- */
+(function ($) {
+  "use strict";
 
-    "use strict";
+  var Medi = {
+    init: function () {
+      this.Basic.init();
+    },
 
-
-    /*=========================== scroll background ===========================*/
-
-    //sticky menu
-    $(window).on('scroll', function() {
-        var window_top = $(window).scrollTop() + 0;
-        if (window_top > 150) {
-            $('.classic_header, .ageland-sticky-header').addClass('menu_fixed');
-        } else {
-            $('.classic_header, .ageland-sticky-header').removeClass('menu_fixed');
-        }
-    });
-
-    //scroll top
-    $(window).on('scroll', function() {
-        $(window).on("scroll", function() {
-            var ScrollBarPosition = $(this).scrollTop();
-            if (ScrollBarPosition > 200) {
-                $(".scroll-top").fadeIn();
-            } else {
-                $(".scroll-top").fadeOut();
-            }
+    Basic: {
+      init: function () {
+        this.preloader();
+        this.scrollTop();
+        this.BackgroundImage();
+        this.MobileMenu();
+        this.SidebarMenu();
+        this.BrandSlider();
+        this.Wow();
+        this.Counter();
+      },
+      preloader: function () {
+        $(window).on("load", function () {
+          $(".preloader").delay(1500).fadeOut("slow");
         });
-        $(".scroll-top").on("click", function() {
-            $('body,html').animate({
-                scrollTop: 0,
+      },
+      scrollTop: function () {
+        $(window).on("scroll", function () {
+          var ScrollBarPosition = $(this).scrollTop();
+          if (ScrollBarPosition > 200) {
+            $(".scroll-top").fadeIn();
+          } else {
+            $(".scroll-top").fadeOut();
+          }
+        });
+        $(".scroll-top").on("click", function () {
+          $("body,html").animate({
+            scrollTop: 0,
+          });
+        });
+      },
+      BackgroundImage: function () {
+        $("[data-background]").each(function () {
+          $(this).css(
+            "background-image",
+            "url(" + $(this).attr("data-background") + ")"
+          );
+        });
+      },
+      MobileMenu: function () {
+        jQuery(window).on("scroll", function () {
+          if (jQuery(window).scrollTop() > 250) {
+            jQuery(".main-header").addClass("sticky-on");
+          } else {
+            jQuery(".main-header").removeClass("sticky-on");
+          }
+        });
+        $(".open_mobile_menu").on("click", function () {
+          $(".mobile_menu_wrap").toggleClass("mobile_menu_on");
+        });
+        $(".open_mobile_menu").on("click", function () {
+          $("body").toggleClass("mobile_menu_overlay_on");
+        });
+        if ($(".mobile_menu li.dropdown ul").length) {
+          $(".mobile_menu li.dropdown").append(
+            '<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>'
+          );
+          $(".mobile_menu li.dropdown .dropdown-btn").on("click", function () {
+            $(this).prev("ul").slideToggle(500);
+          });
+        }
+      },
+      SidebarMenu: function () {
+        if ($(".sidebar_dropdown").length) {
+          $(".sidebar_dropdown").append(
+            '<div class="sidebar-dropdown-btn"><span class="fas fa-plus"></span></div>'
+          );
+          $(".sidebar-dropdown-btn").on("click", function () {
+            $(this).prev("ul").slideToggle(500);
+            $(this).html(
+              $(this).html() == '<span class="fas fa-plus"></span>'
+                ? '<span class="fas fa-minus"></span>'
+                : '<span class="fas fa-plus"></span>'
+            );
+          });
+        }
+      },
+      BrandSlider: function () {
+        var swiperBannerSlider = new Swiper(".brandSlider", {
+          slidesPerView: 4,
+          loop: true,
+          // autoplay: true,
+          breakpoints: {
+            345: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            525: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+            992: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+        },
+        });
+      },
+      DonarSlider: function () {
+        var swiperDonarSlider = new Swiper(".donarSlider", {
+          // slidesPerView: 3,
+          loop: true,
+          autoplay: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            525: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            992: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          },
+        });
+      },
+      Counter: function () {
+        if ($(".odometer").length) {
+          $(".odometer").appear();
+          $(document.body).on("appear", ".odometer", function (e) {
+            var odo = $(".odometer");
+            odo.each(function () {
+              var countNumber = $(this).attr("data-count");
+              $(this).html(countNumber);
             });
-        })
-    });
-
-    /*=========================== close scroll background ===========================*/
-
-    $(window).on('load', function() {
-     $(".preloader").fadeOut("slow");
-    });
-
-    //offcanvus menu js
-    $("#pu_collaps_menu_icon").on('click', function() {
-        $('.canvus_menu').addClass("canvus_active")
-    });
-    $(".canvus_close_icon").on('click', function() {
-        $(".canvus_menu").removeClass("canvus_active")
-    });
-
-    //canvus menu js
-    $(".offcanvus_menu_trigger").on('click', function() {
-        $("body").addClass("active_off_canvus")
-        $(".offcanvas_overlay").addClass("active_offcanvas_overlay")
-    });
-    $(".close_icon, .offcanvas_overlay").on('click', function() {
-        $("body").removeClass("active_off_canvus")
-        $(".offcanvas_overlay").removeClass("active_offcanvas_overlay")
-    });
-
-    // dropdown-toggle class not added for submenus by current WP Bootstrap Navwalker as of November 15, 2017.
-    $('.dropdown > a').addClass('dropdown-toggle');
-
-    $('.dropdown > a.dropdown-toggle').on('click', function(e) {
-        if (!$(this).next().hasClass('show')) {
-            $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+            window.odometerOptions = {
+              format: "d",
+            };
+          });
         }
-        var $subMenu = $(this).next(".dropdown-menu");
-        $subMenu.toggleClass('show');
-        $(this).parents('li.nav-item.dropdown.show').on('.dropdown', function(e) {
-            $('.dropdown-menu > .dropdown .show').removeClass("show");
+      },
+      Niceselect: function () {
+        $(document).ready(function () {
+          $("select").niceSelect();
         });
-        $('.dropdown-menu a.dropdown-toggle').removeClass("show_dropdown");
-        if ($(this).next().hasClass('show')) {
-            $(this).addClass("show_dropdown");
+      },
+      GoogleMap: function () {
+        var mapSelector = $("#popular_map");
+        if (mapSelector.length) {
+          var lat = mapSelector.data("lat");
+          var lon = mapSelector.data("lon");
+          var zoom = mapSelector.data("zoom");
+          var marker = mapSelector.data("marker");
+          var info = mapSelector.data("info");
+          var markerLat = mapSelector.data("mlat");
+          var markerLon = mapSelector.data("mlon");
+          var map = new GMaps({
+            el: "#popular_map",
+            lat: lat,
+            lng: lon,
+            scrollwheel: false,
+            scaleControl: true,
+            streetViewControl: false,
+            panControl: true,
+            disableDoubleClickZoom: true,
+            mapTypeControl: false,
+            zoom: zoom,
+            height: "100%",
+          });
+          map.addMarker({
+            lat: markerLat,
+            lng: markerLon,
+            icon: marker,
+            infoWindow: {
+              content: info,
+            },
+          });
         }
-        return false;
-    });
-    $('.classic_header .dropdown-menu > .dropdown').hover(
-        function() {
-            $(this).find('.dropdown-toggle').toggleClass("active_icon");
-        }
-    );
-
-    $('.off_canvus_menu .dropdown-menu > .dropdown > .dropdown-toggle').on('click', function() {
-        $('.off_canvus_menu .dropdown-menu > .dropdown > .dropdown-toggle').removeClass("active_icon");
-        if ($(this).next().hasClass('show')) {
-            $(this).addClass("active_icon");
-        }
-    });
-    /*=========================== preloader ===========================*/
-    // Wait for window load
-    $(window).on('load', function() {
-        $(".se-pre-con").fadeOut("slow");;
-    });
-
-    /*=========================== preloader ===========================*/
-
-    //data bg image sec
-    $("[data-bg-img]").each(function() {
-        var bg = $(this).data("bg-img");
-        $(this).css({
-            "background-image": "url(" + bg + ")",
-        })
-    })
-
-    $("[data-bg-color]").each(function() {
-        var bg_color = $(this).data("bg-color");
-        $(this).css({
-            "background-color": (bg_color)
-        })
-    })
-
-    $(".widget_block h2, .widget_block .wp-block-search__label").after("<div class='line'</div>")
-
+      },
+      Wow: function () {
+        new WOW().init();
+      },
+    },
+  };
+  jQuery(document).ready(function () {
+    Medi.init();
+  });
 })(jQuery);

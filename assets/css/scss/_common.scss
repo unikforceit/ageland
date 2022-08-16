@@ -1,0 +1,37 @@
+.section-header{
+    .sub-title{
+        display: inline-block;
+        font-size: 26px;
+        font-weight: $fw_semi_bold;
+        line-height: 1.4;
+        color: $secondary_solid;
+        padding-bottom: 8px;
+        margin-bottom: 34px;
+        position: relative;
+        // &::before{
+        //     content: url(../../img/Icon/Line_horizontal.svg);
+        //     position: absolute;
+        //     top: 0;
+        //     left: 50%;
+        //     transform: translateX(-50%);
+        //     width: 65px;
+        //     height: 3px;
+        // }
+    }
+    .title{
+        font-family: $body_font_2;
+        font-size: 63px;
+        font-weight: $fw_bold;
+        line-height: 1.1;
+        color: $dark;
+        padding-bottom: 22px;
+        @media screen and (max-width:767px) {
+            font-size: 39px;
+        }
+    }
+    .info{
+        font-size: 20px;
+        color: $dark;
+        line-height: 1.6;
+    }
+}

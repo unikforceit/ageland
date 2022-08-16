@@ -1,0 +1,51 @@
+.counter-box {
+    text-align: center;
+    span,
+    strong {
+        font-family: $body_font_2;
+        font-size: 30px;
+        font-weight: $fw_bold;
+        color: $secondary_solid;
+        line-height: 1.4;
+        vertical-align: middle;
+    }
+    p {
+        font-size: 16px;
+        color: $dark;
+        text-align: center;
+        line-height: 1.6;
+    }
+}
+.funfact-wrap_2 {
+    .counter-box {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -25px;
+            width: 1px;
+            height: 100%;
+            background-color: rgba($dark,0.1);
+            transform: translateY(-50%);
+        }
+    }
+    .col-md-4 {
+        &:nth-child(2){
+            .counter-box{
+                padding-left: 10px;
+                &::after{
+                    right: -12px;
+                }
+            }
+        }
+        &:last-child {
+            .counter-box {
+                padding-left: 10px;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

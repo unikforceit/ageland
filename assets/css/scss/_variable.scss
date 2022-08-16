@@ -1,0 +1,50 @@
+/*global variable*/
+
+// Common color css
+$primary_solid: #5693BF;
+$primary_light: #D6EEFF;
+$secondary_solid: #F17999;
+$secondary_light: #FFD6E1;
+$tertiary_solid: #FAC252;
+$tertiary_light: #FFE2A8;
+$dark: #224259;
+$shadow: #E5EEF5;
+$bg: #F2F9FF;
+$heading_size: 38px;
+$heading_color: #232323;
+$change: #232323;
+$sidebar_bg:#E8F0F7;
+
+// Body
+$body_font: "SF-UI-Display", serif;
+$body_font_2: "VarentGrotesk", serif;
+$body_font_size: 16px;
+$body_text_color: #012665;
+$body_bg_color: #E5E5E5;
+
+// Menu css
+$main_menu_bg: rgba($primary_solid,0.1);
+$main_menu_sticky_bg: #fff;
+$menu_font_size: 20px;
+$menu_font_color: $dark;
+$menu_font_hover: $primary_solid;
+$sticky_dropdown_position: 38px;
+$menu_dropdown_position: 80px;
+
+
+// Font Weight
+$fw_regular: 400;
+$fw_medium: 500;
+$fw_semi_bold: 600;
+$fw_bold: 700;
+$fw_black: 800;
+
+// Preloader
+$preloader_bg:#fff;
+$preloader_circle: $primary_solid;
+
+// scroll to top
+$scroll_bg: $primary_solid;
+$scroll_icon_color: #fff;
+$scroll_shadow: $primary_solid;
+$scroll_shadow_opacity: 0.3;

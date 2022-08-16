@@ -1,0 +1,182 @@
+.banner-1 {
+    position: relative;
+    padding-bottom: 30px;
+    @media screen and (max-width:991px) {
+        padding-top: 50px;
+    }
+    .banner-element-1{
+        position: absolute;
+        top: 42px;
+        left: 93px;
+        @media screen and (max-width:991px) {
+            display: none;
+        }
+    }
+}
+
+.banner-left {
+    .title {
+        font-family: $body_font_2;
+        font-size: 80px;
+        font-weight: $fw_bold;
+        color: $dark;
+        line-height: 1.1;
+        padding-bottom: 32px;
+        @media screen and (max-width:767px) {
+            font-size: 45px;
+        }
+    }
+
+    .info {
+        font-size: 20px;
+        line-height: 1.6;
+        color: rgba($dark, 0.8);
+        padding-bottom: 56px;
+    }
+}
+
+.banner-right {
+    height: 750px;
+    .banner_img {
+        position: absolute;
+        bottom: 0;
+        @media screen and (max-width:991px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.bannerRating-1 {
+    position: absolute;
+    top: 30%;
+    right: 160px;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 61px;
+    background-color: #ffffff20;
+    box-shadow: 0px 84px 110px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(11px);
+    @media screen and (max-width:991px) {
+        top: 58%;
+        right: 15px;
+    }
+    @media screen and (max-width:767px) {
+        top: 40%;
+    }
+    .bannerRating-1_wrap {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        width: 224px;
+        height: 122px;
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: $tertiary_light;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            .rating {
+                font-family: $body_font_2;
+                font-size: 30px;
+                font-weight: $fw_bold;
+                line-height: 1.4;
+                color: $dark;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.6;
+                color: rgba($dark, 0.6);
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid $tertiary_solid;
+            border-radius: 61px;
+            transition: all 0.3s;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        &:hover {
+            &::before {
+                opacity: 1;
+                top: 16px;
+                left: 16px;
+            }
+        }
+    }
+}
+
+.happy_coustomer {
+    max-width: 350px;
+    height: 122px;
+    border-radius: 61px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 84px 110px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(11px);
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    z-index: 1;
+    @media screen and (max-width:991px) {
+        left: 15px;
+    }
+    @media screen and (max-width:767px) {
+        bottom: 37%;
+    }
+    .happy_coustomer_wrap {
+        width: 350px;
+        position: relative;
+        gap: 20px;
+
+        .customer {
+            li {
+                margin-left: -25px;
+
+                &:first-child {
+                    margin-left: 0;
+                    z-index: 1;
+                }
+
+                &:last-child {
+                    z-index: -1;
+                }
+            }
+        }
+
+        .content {
+            p {
+                font-family: $body_font_2;
+                font-size: 30px;
+                font-weight: $fw_bold;
+                line-height: 1.4;
+                color: $dark;
+            }
+
+            span {
+                font-size: 16px;
+                line-height: 1.6;
+                color: rgba($dark, 0.6);
+            }
+        }
+    }
+}

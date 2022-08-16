@@ -6,33 +6,23 @@
  *
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('single_blog_in'); ?>>
-        <div class="">
-            <div class="card">
-                <?php if ( has_post_thumbnail()) : ?>
-                <div class="images">
-                    <a href="<?php echo esc_url( get_permalink() )?>"><?php the_post_thumbnail('full'); ?></a>
-                    <div class="dates">
-                        <p><?php echo get_the_date('M Y')?></p>
-                    </div>
-                </div>
-                <?php endif; ?>
-                <div class="card-body">
-                    <ul>
-                        <li><i class="fas fa-tags"></i> <?php ageland_single_category();?></li>
-                        <li>
-                            <a href="<?php the_permalink();?>#comment"><i class="fas fa-comment-alt"></i> <?php echo get_comments_number(); ?> <?php echo esc_html('Comments')?></a>
-                        </li>
-                        <li>
-                            <p><?php echo get_avatar( get_the_author_meta('ID'), 30); ?> <?php echo esc_html('by')?> <a href="<?php echo get_author_posts_url(get_the_author_meta('ID'))?>"><?php echo get_the_author()?></a>
-                            </p>
-                        </li>
-                    </ul>
-                    <h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-                    <p><?php echo get_the_excerpt();?></p>
-                    <a href="<?php the_permalink();?>" class="btn"><?php echo __('read more', 'ageland')?></a>
-                </div>
+<article id="post-<?php the_ID(); ?>" <?php post_class('col-lg-4 col-md-6'); ?>>
+    <div class="blog-item">
+        <?php if (has_post_thumbnail()) : ?>
+            <div class="blog-thumb">
+                <?php the_post_thumbnail('full'); ?>
             </div>
+        <?php endif; ?>
+        <a href="<?php the_permalink(); ?>" class="blog-hover">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog_hover.svg" alt="">
+        </a>
+        <div class="blog-info">
+            <a href="<?php the_permalink(); ?>" class="title">
+                <?php the_title(); ?>
+            </a>
+            <p>
+                <?php echo get_the_excerpt(); ?>
+            </p>
         </div>
-        <!--/.single_blog_in-->
+    </div>
 </article>

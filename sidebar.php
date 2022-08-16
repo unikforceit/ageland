@@ -1,2 +1,2 @@
 <?php
-get_template_part('layouts/sidebar', 'left');
+get_template_part('layouts/sidebar', 'right');

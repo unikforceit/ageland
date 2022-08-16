@@ -18,76 +18,84 @@ if (is_home() && get_option('page_for_posts')) {
     $title = get_the_title();
 }
 ?>
-
-<!-- header part -->
-<header class="header_part classic_header dark_color">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav class="navbar navbar-expand-xl justify-content-between align-items-center">
-                    <div class="pu_logo_area">
-                        <?php ageland_logo(); ?>
-                        <?php ageland_logo('navbar-brand sticky_logo'); ?>
-                    </div>
-                    <div class="main_nav_wrapper d-flex justify-content-end">
-                        <div class="main_nav collapse navbar-collapse justify-content-end"
-                             id="navbarNavDropdown">
-                            <?php
-                            echo str_replace(['menu-item-has-children', 'sub-menu'], ['dropdown', 'dropdown-menu'],
-                                wp_nav_menu( array(
-                                        'container' => false,
-                                        'echo' => false,
-                                        'menu_id' => 'main-menu',
-                                        'theme_location' => 'primary',
-                                        'fallback_cb'=> 'ageland_no_main_nav',
-                                        'items_wrap' => '<ul class="navbar-nav">%3$s</ul>',
-                                    )
-                                ));
-                            ?>
+<!-- Start Main Header -->
+<header id="main-header" class="main-header">
+    <div class="menu-header">
+        <div class="container">
+            <div class="main-menu">
+                <div class="row justify-content-between align-items-center">
+                    <!-- logo -->
+                    <div class="col-lg-2 col-md-4 col-sm-8 logo-col">
+                        <div class="logo">
+                            <?php ageland_logo(); ?>
                         </div>
-                        <div class="header_right_btn">
-                            <div class="pu_collaps_menu_icon offcanvus_menu_trigger navbar-toggler collapsed mr-0">
-                                <div class="burger_icon">
-                                    <span class="burger_icon_top"></span>
-                                    <span class="burger_icon_bottom"></span>
+                    </div>
+                    <!-- Menu -->
+                    <div class="col-lg-10 col-md-8 col-sm-4 menu-col">
+                        <div class="main_menu_wrap d-flex justify-content-end align-items-center">
+                            <!--Main Menu-->
+                            <div class="main-menu-navigation">
+                                <nav class="navigation-main-area ul-li">
+                                    <?php
+                                    echo str_replace(['menu-item-has-children', 'sub-menu'], ['dropdown', 'dropdown-menu'],
+                                        wp_nav_menu( array(
+                                                'container' => false,
+                                                'echo' => false,
+                                                'menu_id' => 'main-menu',
+                                                'theme_location' => 'primary',
+                                                'fallback_cb'=> 'ageland_no_main_nav',
+                                                'items_wrap' => '<ul>%3$s</ul>',
+                                            )
+                                        ));
+                                    ?>
+                                </nav>
+                            </div>
+                            <!-- Start Mobile Menu -->
+                            <div class="mobile_menu position-relative">
+                                <div class="mobile_menu_button open_mobile_menu">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                                <div class="mobile_menu_wrap">
+                                    <div class="mobile_menu_overlay open_mobile_menu"></div>
+                                    <div class="mobile_menu_content">
+                                        <div class="mobile_menu_close open_mobile_menu">
+                                            <i class="fas fa-times"></i>
+                                        </div>
+                                        <div class="m-brand-logo">
+                                            <?php ageland_logo(); ?>
+                                        </div>
+                                        <nav class="mobile-main-navigation  clearfix ul-li">
+                                            <?php
+                                            echo str_replace(['menu-item-has-children', 'sub-menu'], ['dropdown', 'dropdown-menu'],
+                                                wp_nav_menu( array(
+                                                        'container' => false,
+                                                        'echo' => false,
+                                                        'menu_id' => 'm-main-nav',
+                                                        'theme_location' => 'primary',
+                                                        'fallback_cb'=> 'ageland_no_main_nav',
+                                                        'items_wrap' => '<ul class="navbar-nav text-capitalize clearfix">%3$s</ul>',
+                                                    )
+                                                ));
+                                            ?>
+                                        </nav>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Start Menu Button -->
+                            <div class="menu_btn d-flex align-items-center flex-wrap">
+                                <div class="header_btn">
+                                    <a href="#">Sey, Hello!</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </nav>
+                </div>
             </div>
         </div>
     </div>
 </header>
-<!-- header part end -->
-<!-- off canvus menu -->
-<div class="off_canvus_menu">
-    <div class="off_canvus_menu_iner">
-        <div class="off_canvus_menu_iner_logo">
-            <?php ageland_logo('off_canvus_logo'); ?>
-            <div class="popup-close-button close_icon">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
-        <div class="off_canvus_menu_iner_content">
-            <nav class="navbar">
-                <?php
-                echo str_replace(['menu-item-has-children', 'sub-menu'], ['dropdown', 'dropdown-menu'],
-                    wp_nav_menu( array(
-                            'container' => false,
-                            'echo' => false,
-                            'menu_id' => 'main-menu',
-                            'theme_location' => 'primary',
-                            'fallback_cb'=> 'ageland_no_main_nav',
-                            'items_wrap' => '<ul class="navbar-nav">%3$s</ul>',
-                        )
-                    ));
-                ?>
-            </nav>
-        </div>
-    </div>
-</div>
-<div class="offcanvas_overlay"></div>
+<!-- End Main Header -->
 <!--broadcramp-->
 <header class="inner_broadcramp" data-bg-img="<?php echo get_template_directory_uri().'/assets/img/banner.jpg'?>">
     <div class="container">
@@ -104,3 +112,14 @@ if (is_home() && get_option('page_for_posts')) {
     <!--/.container-->
 </header>
 <!--broadcramp-->
+
+<!-- Start Breadcrumb -->
+<section class="inner-page-banner">
+    <div class="container">
+        <div class="pagination ul-li">
+            <?php ageland_unit_breadcumb(); ?>
+        </div>
+        <h1 class="page-title">A Simple Social Media Marketing Checklist</h1>
+    </div>
+</section>
+<!-- End Breadcrumb -->

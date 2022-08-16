@@ -1,0 +1,37 @@
+.scroll-top {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $scroll_bg;
+  width: 50px;
+  height: 50px;
+  color: $scroll_icon_color;
+  bottom: 50px;
+  right: 50px;
+  box-shadow: 0 24px 36px 0 rgba($scroll_shadow, $scroll_shadow_opacity);
+  border-radius: 7px;
+  cursor: pointer;
+  z-index: 10;
+
+  i {
+    animation: bounce 2s ease infinite;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  10%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}

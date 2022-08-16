@@ -1,0 +1,60 @@
+.inner-page-banner {
+    text-align: center;
+    padding: 48px 0 80px;
+    position: relative;
+    z-index: 2;
+    background-color: $main_menu_bg;
+    &:before {
+      content: url(../../img/Icon/Line_horizontal.svg);
+      position: absolute;
+      height: 8px;
+      width: 178px;
+      bottom: 48px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .page-title {
+      font-family:$body_font_2;
+      display: inline-block;
+      font-size: 48px;
+      line-height: 1.10;
+      font-weight: $fw_bold;
+      color: $dark;
+      margin-top: 12px;
+      text-transform: capitalize;
+    }
+    .pagination {
+      ul {
+        margin: 0 auto;
+        li {
+          position: relative;
+          padding-right: 32px;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $secondary_solid;
+          }
+          &:last-child {
+            padding-right: 0;
+            &:after {
+              content: none;
+            }
+          }
+          a {
+            font-family: $body_font;
+            font-size: 20px;
+            font-weight: $fw_regular;
+            line-height: 1.60;
+            color: $dark;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }  

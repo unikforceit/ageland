@@ -11,43 +11,43 @@
  *
  */
 get_header();
-if (is_active_sidebar('sidebar-1')) {
-    $main = 'col-lg-8';
-    $sidebar = 'col-lg-4';
-} else {
-    $main = 'col-lg-12';
-    $sidebar = 'col-lg-12';
-}
+//if (is_active_sidebar('sidebar-1')) {
+//    $main = 'col-lg-8';
+//    $sidebar = 'col-lg-4';
+//} else {
+//    $main = 'col-lg-12';
+//    $sidebar = 'col-lg-12';
+//}
 ?>
-<!--- Blog Content --->
-<section class="blog_page_main">
-    <div class="container">
-        <div class="row">
-            <div class="<?php echo esc_attr($main); ?>">
-                <div class="blog_page_single_post">
-                    <?php if (have_posts()) :
 
-                        /* Start the Loop */
-                        while (have_posts()) : the_post();
+<!-- Start Main content -->
+<section class="main-content">
+    <div class="archive-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <?php if (have_posts()) :
 
-                            get_template_part('template-parts/content');
+                    /* Start the Loop */
+                    while (have_posts()) : the_post();
 
-                        endwhile;
-                    else :
+                        get_template_part('template-parts/content');
 
-                        get_template_part('template-parts/content', 'none');
+                    endwhile;
+                else :
 
-                    endif; ?>
-                </div>
-                <div class="pagination-post">
-                     <?php ageland_pagination(); ?>
-                </div>
+                    get_template_part('template-parts/content', 'none');
+
+                endif; ?>
             </div>
-            <div class="<?php echo esc_attr($sidebar); ?>">
-                <?php get_template_part('layouts/sidebar', 'right'); ?>
+
+            <!-- Start Pegination -->
+            <div class="pegination">
+                <?php ageland_pagination(); ?>
             </div>
+            <!-- End Pegination -->
         </div>
     </div>
 </section>
+<!-- End Main content -->
 
 <?php get_footer(); ?>

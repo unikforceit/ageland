@@ -1,0 +1,42 @@
+.pegination {
+    padding-top: 72px;
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        li {
+            a {
+                font-size: 20px;
+                font-weight: $fw_medium;
+                color: $dark;
+                background-color: rgba($dark,0.07);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 72px;
+                height: 72px;
+                border-radius: 50%;
+                transition: all 0.3s ease-in-out;
+                &.pegi-active {
+                    background-color: $primary_solid;
+                    color: #ffffff;
+                }
+                &:hover {
+                    background: $primary_solid;
+                    color: #ffffff;
+                }
+            }
+            &:first-child a,
+            &:last-child a {
+                color: $dark;
+                font-weight: 700;
+                margin-right: 0px;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

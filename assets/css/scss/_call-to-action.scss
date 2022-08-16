@@ -1,0 +1,30 @@
+.call_to_action {
+  background-color: rgba($dark, 0.05);
+  padding: 80px 0;
+  &_content {
+    @media screen and (max-width: 991px) {
+      gap: 24px;
+    }
+    p {
+      font-size: 20px;
+      font-weight: $fw_medium;
+      line-height: 1.6;
+      color: $dark;
+      flex: 0 0 312px;
+      @media screen and (max-width: 991px) {
+        flex: 0 0 auto;
+        text-align: center;
+      }
+    }
+    h4 {
+      font-family: $body_font_2;
+      font-size: 128px;
+      font-weight: $fw_bold;
+      color: $dark;
+      line-height: 1.1;
+      @media screen and (max-width: 767px) {
+        font-size: 70px;
+      }
+    }
+  }
+}

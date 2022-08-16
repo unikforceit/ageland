@@ -1,0 +1,66 @@
+.brand-section{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 180px;
+        background-color: $dark;
+    }
+}
+.brand-logo{
+    padding-top: 70px;
+    .brandSlider{
+        .swiper-wrapper{
+            .swiper-slide{
+                @media screen and (max-width:767px) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+// .brand-logo{
+//     .brandSlider{
+//         .swiper-wrapper{
+//             transition-timing-function: linear;
+//         }
+//     }
+// }
+.badge{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 56px;
+    text-align: right;
+    padding-right: 28px;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        right: 10px;
+        width: 200px;
+        height: 200px;
+        background-color: $dark;
+        z-index: -1;
+        border-radius: 50%;
+        @media screen and (max-width:991px) {
+            bottom: auto;
+            top: 0;
+            right: -12px;
+            width: 250px;
+            height: 250px;
+            border-radius: 0 0 50% 50%;
+        }
+    }
+    // img{
+    //     position: absolute;
+    //     top: 50%;
+    //     right: 0;
+    //     transform: translateY(-50%);
+    //     width: 160px;
+    //     height: 160px;
+    // }
+}

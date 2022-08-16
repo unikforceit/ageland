@@ -1,0 +1,120 @@
+.footer-wraper {
+  background-color: $dark;
+  padding: 77px 0px 85px;
+  position: relative;
+}
+// Social Icon
+.social-icon {
+  ul {
+    gap: 40px;
+    li {
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.5;
+        transition: all 0.3s;
+        svg{
+          path{
+            fill: #fff;
+            stroke: #fff;
+          }
+        }
+        &:hover {
+          opacity: 1;
+          svg{
+            path{
+              fill: $secondary_solid;
+              stroke: $secondary_solid;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Footer Divider
+.footer-divider {
+  padding-top: 79px;
+  margin-bottom: 80px;
+  border-bottom: 2px solid #fff;
+  opacity: 0.2;
+}
+.footer-widget {
+  .footer-logo {
+    padding-bottom: 30px;
+  }
+  .footer-title {
+    font-family: $body_font_2;
+    font-size: 30px;
+    font-weight: $fw_bold;
+    color: #fff;
+    line-height: 140%;
+    padding-bottom: 30px;
+  }
+  .footer-text {
+    p {
+      color: #fff;
+      font-size: 20px;
+      line-height: 1.6;
+      padding-bottom: 20px;
+    }
+  }
+  .footer-icon {
+    margin-top: 30px;
+    ul {
+      gap: 16px;
+      li {
+        list-style: none;
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: #244c8d;
+          transition: all 0.3s;
+          &:hover {
+            background-color: #fff;
+            i {
+              color: #ff5400;
+            }
+          }
+        }
+      }
+    }
+    i {
+      color: #fff;
+    }
+  }
+  .footer-list {
+    li{
+      a {
+        display: inline-block;
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 16px;
+        line-height: 1.6;
+      }
+      
+      &:last-child{
+        a{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+.footer-contact {
+  display: flex;
+  padding-bottom: 10px;
+  .icon {
+    padding-right: 15px;
+    padding-top: 4px;
+  }
+  .text {
+    color: #fff;
+    font-size: 20px;
+  }
+}

@@ -11,20 +11,19 @@
  *
  */
 get_header();
-if (is_active_sidebar('sidebar-1')) {
-    $main = 'col-lg-8';
-    $sidebar = 'col-lg-4';
-} else {
-    $main = 'col-lg-12';
-    $sidebar = 'col-lg-12';
-}
+//if (is_active_sidebar('sidebar-1')) {
+//    $main = 'col-lg-8';
+//    $sidebar = 'col-lg-4';
+//} else {
+//    $main = 'col-lg-12';
+//    $sidebar = 'col-lg-12';
+//}
 ?>
-<!--- Blog Content --->
-<section class="blog_page_main">
-    <div class="container">
-        <div class="row">
-            <div class="<?php echo esc_attr($main); ?>">
-                <div class="blog_page_single_post">
+    <!-- Start Main content -->
+    <section class="main-content">
+        <div class="archive-section">
+            <div class="container">
+                <div class="row justify-content-center">
                     <?php if (have_posts()) :
 
                         /* Start the Loop */
@@ -39,15 +38,15 @@ if (is_active_sidebar('sidebar-1')) {
 
                     endif; ?>
                 </div>
-                <div class="pagination-post">
+
+                <!-- Start Pegination -->
+                <div class="pegination">
                     <?php ageland_pagination(); ?>
                 </div>
-            </div>
-            <div class="<?php echo esc_attr($sidebar); ?>">
-                <?php get_template_part('layouts/sidebar', 'right'); ?>
+                <!-- End Pegination -->
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    <!-- End Main content -->
 
 <?php get_footer(); ?>
