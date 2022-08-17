@@ -49,7 +49,8 @@ function ageland_unit_breadcumb($separator = '/') {
     $text['404']      = 'Error 404'; // text for the 404 page
     $text['page']     = 'Page %s'; // text 'Page N'
     $text['cpage']    = 'Comment Page %s'; // text 'Comment Page N'
-    $wrap_before    = '<ul class="breadcrumbs">'; // the opening wrapper tag
+//    $wrap_before    = '<ul class="breadcrumbs">'; // the opening wrapper tag
+    $wrap_before    = '<ul>'; // the opening wrapper tag
     $wrap_after     = '</ul><!-- .breadcrumbs -->'; // the closing wrapper tag
     $sep            = '<li class="breadcrumbs__separator"> '.$separator.' </li>'; // separator between crumbs
     $before         = '<li class="breadcrumbs__current">'; // tag before the current crumb

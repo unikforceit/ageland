@@ -1426,6 +1426,10 @@ select:visited {
 .inner-page-banner .pagination ul li {
   position: relative;
   padding-right: 32px;
+  padding-left: 10px;
+}
+.inner-page-banner .pagination ul li.breadcrumbs__separator {
+  display: none;
 }
 .inner-page-banner .pagination ul li:after {
   content: "";
@@ -1437,6 +1441,9 @@ select:visited {
   height: 6px;
   border-radius: 50%;
   background-color: #F17999;
+}
+.inner-page-banner .pagination ul li:first-child {
+  padding-left: 0;
 }
 .inner-page-banner .pagination ul li:last-child {
   padding-right: 0;

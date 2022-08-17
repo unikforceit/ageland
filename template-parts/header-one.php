@@ -38,12 +38,12 @@ if (is_home() && get_option('page_for_posts')) {
                                 <nav class="navigation-main-area ul-li">
                                     <?php
                                     echo str_replace(['menu-item-has-children', 'sub-menu'], ['dropdown', 'dropdown-menu'],
-                                        wp_nav_menu( array(
+                                        wp_nav_menu(array(
                                                 'container' => false,
                                                 'echo' => false,
                                                 'menu_id' => 'main-menu',
                                                 'theme_location' => 'primary',
-                                                'fallback_cb'=> 'ageland_no_main_nav',
+                                                'fallback_cb' => 'ageland_no_main_nav',
                                                 'items_wrap' => '<ul>%3$s</ul>',
                                             )
                                         ));
@@ -67,12 +67,12 @@ if (is_home() && get_option('page_for_posts')) {
                                         <nav class="mobile-main-navigation  clearfix ul-li">
                                             <?php
                                             echo str_replace(['menu-item-has-children', 'sub-menu'], ['dropdown', 'dropdown-menu'],
-                                                wp_nav_menu( array(
+                                                wp_nav_menu(array(
                                                         'container' => false,
                                                         'echo' => false,
                                                         'menu_id' => 'm-main-nav',
                                                         'theme_location' => 'primary',
-                                                        'fallback_cb'=> 'ageland_no_main_nav',
+                                                        'fallback_cb' => 'ageland_no_main_nav',
                                                         'items_wrap' => '<ul class="navbar-nav text-capitalize clearfix">%3$s</ul>',
                                                     )
                                                 ));
@@ -85,7 +85,7 @@ if (is_home() && get_option('page_for_posts')) {
                             <!-- Start Menu Button -->
                             <div class="menu_btn d-flex align-items-center flex-wrap">
                                 <div class="header_btn">
-                                    <a href="#">Sey, Hello!</a>
+                                    <a href="#"><?php echo esc_html('Sey, Hello!'); ?></a>
                                 </div>
                             </div>
                         </div>
@@ -96,22 +96,6 @@ if (is_home() && get_option('page_for_posts')) {
     </div>
 </header>
 <!-- End Main Header -->
-<!--broadcramp-->
-<header class="inner_broadcramp" data-bg-img="<?php echo get_template_directory_uri().'/assets/img/banner.jpg'?>">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="broadcramp_inside_hdr">
-                    <h4><?php echo esc_html($title); ?></h4>
-                    <?php ageland_unit_breadcumb(); ?>
-                </div>
-                <!--/.broadcramp_inside_hdr-->
-            </div>
-        </div>
-    </div>
-    <!--/.container-->
-</header>
-<!--broadcramp-->
 
 <!-- Start Breadcrumb -->
 <section class="inner-page-banner">
@@ -119,7 +103,7 @@ if (is_home() && get_option('page_for_posts')) {
         <div class="pagination ul-li">
             <?php ageland_unit_breadcumb(); ?>
         </div>
-        <h1 class="page-title">A Simple Social Media Marketing Checklist</h1>
+        <h1 class="page-title"><?php echo esc_html('Blog Details'); ?></h1>
     </div>
 </section>
 <!-- End Breadcrumb -->
