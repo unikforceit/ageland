@@ -103,11 +103,20 @@ function ageland_widgets_init() {
 		'name'          => esc_html__( 'Sidebar Right', 'ageland' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'ageland' ),
-		'before_widget' => '<div id="%1$s" class="widgets %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3><div class="line"></div>',
+		'before_title'  => '<div class="widget-head"><h3>',
+		'after_title'   => '</h3></div>',
 	) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer Sidebar', 'ageland' ),
+        'id'            => 'footer-sidebar',
+        'description'   => esc_html__( 'Add widgets here.', 'ageland' ),
+        'before_widget' => '<div id="%1$s" class="col-lg-3 col-md-4 col-sm-6 %2$s"><div class="footer-widget">',
+        'after_widget'  => '</div></div>',
+        'before_title'  => '<h4 class="footer-title">',
+        'after_title'   => '</h4>',
+    ) );
 }
 add_action( 'widgets_init', 'ageland_widgets_init' );
 /**
