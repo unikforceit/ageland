@@ -11,7 +11,7 @@
 ?>
 
 </div><!-- #page -->
-<?php ageland_dynamic_footer();?>
-<?php wp_footer();?>
+<?php ageland_dynamic_footer(); ?>
+<?php wp_footer(); ?>
 </body>
 </html>

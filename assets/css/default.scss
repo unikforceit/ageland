@@ -416,7 +416,7 @@ ol.wp-block-latest-comments {
 .widget_pages li a,
 .widget_meta li a,
 .widget_nav_menu li a {
-  font-family: "Hind", sans-serif;
+  font-family: "", sans-serif;
   font-weight: 400;
   color: #383866;
   font-size: 16px;
@@ -1100,6 +1100,7 @@ th, td {
 
 .wp-block-button__link {
   font-size: 14px;
+  color: #fff !important;
 }
 
 .wp-block-button.is-style-squared .wp-block-button__link {

@@ -103,7 +103,9 @@ if (is_home() && get_option('page_for_posts')) {
         <div class="pagination ul-li">
             <?php ageland_unit_breadcumb(); ?>
         </div>
-        <h1 class="page-title"><?php echo esc_html('Blog Details'); ?></h1>
+        <h1 class="page-title">
+            <?php esc_html_e($title, 'ageland'); ?>
+        </h1>
     </div>
 </section>
 <!-- End Breadcrumb -->

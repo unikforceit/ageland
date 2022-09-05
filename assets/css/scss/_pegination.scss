@@ -19,17 +19,20 @@
                 height: 72px;
                 border-radius: 50%;
                 transition: all 0.3s ease-in-out;
-                &.pegi-active {
-                    background-color: $primary_solid;
-                    color: #ffffff;
-                }
+
                 &:hover {
                     background: $primary_solid;
                     color: #ffffff;
                 }
             }
-            &:first-child a,
-            &:last-child a {
+            &.pegi-active {
+                a{
+                    background-color: $primary_solid;
+                    color: #ffffff;
+                }
+            }
+            &.pegi-pre a,
+            &.pegi-next a {
                 color: $dark;
                 font-weight: 700;
                 margin-right: 0px;

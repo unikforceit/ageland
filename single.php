@@ -14,41 +14,6 @@ if (is_active_sidebar('sidebar-1')) {
     $sidebar = 'col-lg-12';
 }
 ?>
-    <!-- blog area five start here  -->
-    <section class="blog_details_main">
-        <div class="container">
-            <div class="row">
-                <div class="<?php echo esc_attr($main); ?>">
-                    <div class="blog_details_single_p">
-                        <?php if (have_posts()) :
-
-                            /* Start the Loop */
-                            while (have_posts()) : the_post();
-
-                                get_template_part('template-parts/singlecontent');
-
-                            endwhile;
-                        else :
-
-                            get_template_part('template-parts/content', 'none');
-
-                        endif; ?>
-                    </div>
-                    <div class="ageland-comment-box">
-                        <?php
-                        if (comments_open() || get_comments_number()) :
-                            comments_template();
-                        endif;
-                        ?>
-                    </div>
-                </div>
-                <div class="<?php echo esc_attr($sidebar); ?>">
-                    <?php get_template_part('layouts/sidebar', 'right'); ?>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Start Main content -->
     <section class="main-content">
         <div class="archive-section">
@@ -67,7 +32,13 @@ if (is_active_sidebar('sidebar-1')) {
 
                             get_template_part('template-parts/content', 'none');
 
-                        endif; ?>
+                        endif;
+
+                        if (comments_open() || get_comments_number()) :
+                            comments_template();
+                        endif;
+                        
+                        ?>
                     </div>
                     <div class="<?php echo esc_attr($sidebar); ?> wow animate__fadeInUp" data-wow-duration="2s">
                         <?php get_template_part('layouts/sidebar', 'right'); ?>

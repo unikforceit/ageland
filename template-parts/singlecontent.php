@@ -66,12 +66,3 @@
         </div>
     </div>
 </div>
-<div class="post_share_btn">
-    <ul>
-        <li><?php echo esc_html('Share This Post:'); ?></li>
-        <li><a href="https://www.facebook.com/unikforceit/" class="fb"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="https://twitter.com/unikforceit" class="tw"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="https://www.instagram.com/unikforceit/" class="in"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/unikforceit" class="li"><i class="fab fa-linkedin-in"></i></a></li>
-    </ul>
-</div>
