@@ -8,25 +8,27 @@
 get_header();
 
 $opt_404_page = ageland_theme_option('error_tmpl');
-if ($opt_404_page){
+if ($opt_404_page) {
     echo do_shortcode('[INSERT_ELEMENTOR id="' . $opt_404_page . '"]');
-}else {
-?>
-    <!--404 main_page-->
-    <div class="error_page_main_con">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 offset-md-1">
-                    <div class="inside">
-                        <img src="<?php echo get_template_directory_uri()?>/assets/img/404.png" alt="#" />
-                        <h4><?php echo esc_html("Something went wrong Page Can't Found");?></h4>
-                        <a href="<?php echo esc_url( home_url( '/' ) );?>" class="btn"><?php echo esc_html('Back to Home');?></a>
-                    </div>
-                </div>
-            </div>
+} else {
+    ?>
+    <!-- Start Error -->
+    <section class="error-section">
+        <div class="error-element-1"><img src="<?php echo get_template_directory_uri() ?>/assets/img/shape/shape_1.png"
+                                          alt=""></div>
+        <div class="error-element-2"><img src="<?php echo get_template_directory_uri() ?>/assets/img/shape/shape_2.png"
+                                          alt=""></div>
+        <div class="error-element-3"><img src="<?php echo get_template_directory_uri() ?>/assets/img/shape/shape_3.png"
+                                          alt=""></div>
+        <div class="error-element-4"><img src="<?php echo get_template_directory_uri() ?>/assets/img/shape/shape_4.png"
+                                          alt=""></div>
+        <div class="error-wrap">
+            <h4 class="title"><?php echo esc_html('404 Error'); ?></h4>
+            <p class="info"><?php echo esc_html("The page you are looking for doesn't exist or has been moved"); ?></p>
+            <a href="<?php echo esc_url(home_url('/')); ?>"
+               class="error_btn"><?php echo esc_html('Back To Home'); ?></a>
         </div>
-        <!--/.container-->
-    </div>
-    <!--404 main_page-->
-    <?php }
-    get_footer();
+    </section>
+    <!-- End Error -->
+<?php }
+get_footer();

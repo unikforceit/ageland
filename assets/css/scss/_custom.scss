@@ -3,3 +3,7 @@
     max-width: 1400px;
   }
 }
+
+.error404 header, .error404 .inner-page-banner, .error404 footer {
+  display: none;
+}
