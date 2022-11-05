@@ -19,7 +19,7 @@
                 height: 72px;
                 border-radius: 50%;
                 transition: all 0.3s ease-in-out;
-
+                
                 &:hover {
                     background: $primary_solid;
                     color: #ffffff;
@@ -28,7 +28,7 @@
             &.pegi-active {
                 a{
                     background-color: $primary_solid;
-                    color: #ffffff;
+                color: #ffffff;
                 }
             }
             &.pegi-pre a,

@@ -9,9 +9,10 @@ $tertiary_solid: #FAC252;
 $tertiary_light: #FFE2A8;
 $dark: #224259;
 $shadow: #E5EEF5;
+$green: #54BE72;
 $bg: #F2F9FF;
 $heading_size: 38px;
-$heading_color: #232323;
+$heading_color: $dark;
 $change: #232323;
 $sidebar_bg:#E8F0F7;
 
@@ -19,8 +20,8 @@ $sidebar_bg:#E8F0F7;
 $body_font: "SF-UI-Display", serif;
 $body_font_2: "VarentGrotesk", serif;
 $body_font_size: 16px;
-$body_text_color: #012665;
-$body_bg_color: #E5E5E5;
+$body_text_color: $dark;
+$body_bg_color: $bg;
 
 // Menu css
 $main_menu_bg: rgba($primary_solid,0.1);

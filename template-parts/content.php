@@ -11,11 +11,11 @@
         <?php if (has_post_thumbnail()) : ?>
             <div class="blog-thumb">
                 <?php the_post_thumbnail('full'); ?>
+                <a href="<?php the_permalink(); ?>" class="blog-hover">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog_hover.svg" alt="">
+                </a>
             </div>
         <?php endif; ?>
-        <a href="<?php the_permalink(); ?>" class="blog-hover">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog_hover.svg" alt="">
-        </a>
         <div class="blog-info">
             <a href="<?php the_permalink(); ?>" class="title">
                 <?php the_title(); ?>

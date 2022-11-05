@@ -18,7 +18,7 @@ body {
   font-style: normal;
   font-size: $body_font_size;
   color: $body_text_color;
-  background-color: $bg;
+  background-color: $body_bg_color;
   line-height: 1.5;
   -moz-osx-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
@@ -132,6 +132,10 @@ select:visited {
 @import "button";
 // commom css
 @import "common";
+// Nice select css
+@import "nice-select";
+// custom css
+@import "custom";
 // Header css
 @import "header";
 // Banner css
@@ -154,11 +158,25 @@ select:visited {
 @import "blog-details";
 // Team member css
 @import "team";
-// wp custom css
-@import "custom";
 // Team member details css
 @import "team-details";
 // Call to action css
 @import "call-to-action";
+// Pricing Plan css
+@import "pricing";
+// Error css
+@import "error";
+// Comming Soon css
+@import "comming-soon";
+// Contact css
+@import "contact";
+// FAQ css
+@import "faq";
+// Shop css
+@import "shop";
+// Shop Details css
+@import "shop-details";
+// Cart css
+@import "shop-cart";
 // Footer css
 @import "footer";

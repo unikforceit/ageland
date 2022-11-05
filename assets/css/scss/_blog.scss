@@ -31,21 +31,23 @@
       transition: all 0.3s;
     }
     &:hover{
-      ~
       .blog-hover{
-        transform: scale(1);
+        transform: scale(1) translate(-50%,-50%);
         z-index: 1;
       }
     }
-  }
-  .blog-hover{
-    position: absolute;
-    top: 25%;
-    left: 30%;
-    width: 158px;
-    height: 158px;
-    transform: scale(0);
-    transition: all 0.3s ease;
+    .blog-hover{
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 158px;
+      height: 158px;
+      transform: scale(0);
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
   }
   .blog-info {
     .title {

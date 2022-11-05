@@ -1,0 +1,49 @@
+.error-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    .error-element-1{
+        position: absolute;
+        top: 21%;
+        left: 13%;
+        @media screen and (max-width:767px) {
+            top: 15%;
+        }
+    }
+    .error-element-2{
+        position: absolute;
+        bottom: 21%;
+        right: 17%;
+        @media screen and (max-width:767px) {
+            bottom: 15%;
+        }
+    }
+    .error-element-3{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .error-element-4{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+.error-wrap{
+    text-align: center;
+    .title{
+        font-size: 80px;
+        font-weight: $fw_bold;
+        line-height: 1.1;
+        padding-bottom: 25px;
+    }
+    .info{
+        font-size: 20px;
+        padding-bottom: 72px;
+        @media screen and (max-width:767px) {
+            padding-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.sorting-area {
+    padding-bottom: 40px;
+}
+
+.sorting-result-text {
+    font-size: 20px;
+    line-height: 1.6;
+    color: $dark;
+}
+
+.shop-sorting {
+    padding-left: 57px;
+
+    @media screen and (max-width:991px) {
+        padding-left: 0;
+    }
+}
+
+.shop-item {
+    .shop-thumb {
+        overflow: hidden;
+        margin-bottom: 17px;
+        border-radius: 24px;
+        position: relative;
+
+        img {
+            border-radius: 24px;
+            transition: all 0.3s;
+        }
+        .product-cart-qView{
+            gap: 12px;
+            position: absolute;
+            bottom: -56px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.3s;
+            .item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                background-color: #ffffff20;
+                backdrop-filter: blur(10px);
+            }
+        }
+    }
+
+    .shop-info {
+        .title {
+            font-family: $body_font_2;
+            font-size: 30px;
+            font-weight: $fw_bold;
+            line-height: 1.4;
+            color: $dark;
+            margin-bottom: 8px;
+            transition: all 0.3s;
+        }
+
+        .price-rating {
+            .price {
+                p {
+                    font-size: 20px;
+                    font-weight: $fw_medium;
+                    color: $dark;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .shop-thumb {
+            img {
+                transform: scale(1.1);
+            }
+            .product-cart-qView{
+                bottom: 32px;
+            }
+        }
+
+        .shop-info {
+            .title {
+                color: $primary_solid;
+            }
+        }
+    }
+}
+.product-rating {
+    gap: 10px;
+    ul {
+        gap: 5px;
+
+        li {
+            i {
+                color: $tertiary_solid;
+            }
+
+            &:last-child {
+                i {
+                    color: rgba($dark, 0.3);
+                }
+            }
+        }
+    }
+}

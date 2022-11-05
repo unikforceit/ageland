@@ -1,0 +1,133 @@
+.contact-form-section {
+    padding: 48px 0px 160px;
+}
+
+.contact-form {
+    background-color: $shadow;
+    border-radius: 40px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+    @media screen and (max-width:767px) {
+        padding: 20px;
+    }
+    .input-group {
+        position: relative;
+        border-radius: 40px;
+        overflow: hidden;
+
+        .input-icon {
+            position: absolute;
+            top: 42%;
+            left: 33px;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            z-index: 4;
+            opacity: 0.5;
+        }
+    }
+
+    input {
+        height: 80px;
+        background-color: $bg;
+        border: none;
+        padding: 24px 66px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: rgba($dark, 0.5);
+
+        &:focus {
+            background-color: $bg;
+            font-size: 20px;
+            line-height: 1.6;
+            color: rgba($dark, 0.5);
+        }
+
+        &::placeholder {
+            font-size: 20px;
+            line-height: 1.6;
+            color: rgba($dark, 0.5);
+        }
+    }
+
+    textarea {
+        min-height: 200px;
+        background-color: $bg;
+        border-radius: 24px;
+        border: none;
+        padding: 24px 32px;
+
+        &::placeholder {
+            font-size: 20px;
+            line-height: 1.6;
+            color: rgba($dark, 0.5);
+        }
+    }
+}
+
+.support-items {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .support-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+        @media screen and (max-width:767px) {
+            flex-direction: column;
+        }
+
+        .icon {
+            flex: 0 0 48px;
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            background-color: $tertiary_solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.icon-1 {
+                background-color: $tertiary_solid;
+            }
+
+            &.icon-2 {
+                background-color: $secondary_solid;
+            }
+        }
+
+        .content {
+            flex: 0 0 auto;
+            max-width: calc(100% - 48px);
+            @media screen and (max-width:991px) {
+                max-width: 650px;
+            }
+            .title {
+                font-size: 20px;
+                font-weight: $fw_medium;
+                line-height: 1.6;
+                color: $dark;
+                padding-bottom: 8px;
+            }
+
+            .info {
+                font-size: 20px;
+                line-height: 1.6;
+                color: rgba(34, 66, 89, 0.6);
+
+                a {
+                    text-decoration: underline;
+                    color: $primary_solid;
+                }
+            }
+        }
+    }
+}
+
+.map-frame {
+    height: 400px;
+}
