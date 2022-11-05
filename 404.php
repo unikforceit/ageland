@@ -14,13 +14,13 @@ if ($opt_404_page) {
     ?>
     <!-- Start Error -->
     <section class="error-section">
-        <div class="error-element-1"><img src="<?php echo get_template_directory_uri() ?>/assets/img/shape/shape_1.png"
+        <div class="error-element-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape_1.png"
                                           alt=""></div>
-        <div class="error-element-2"><img src="<?php echo get_template_directory_uri() ?>/assets/img/shape/shape_2.png"
+        <div class="error-element-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape_2.png"
                                           alt=""></div>
-        <div class="error-element-3"><img src="<?php echo get_template_directory_uri() ?>/assets/img/shape/shape_3.png"
+        <div class="error-element-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape_3.png"
                                           alt=""></div>
-        <div class="error-element-4"><img src="<?php echo get_template_directory_uri() ?>/assets/img/shape/shape_4.png"
+        <div class="error-element-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape_4.png"
                                           alt=""></div>
         <div class="error-wrap">
             <h4 class="title"><?php echo esc_html('404 Error'); ?></h4>
