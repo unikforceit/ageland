@@ -1,13 +1,13 @@
 /*global variable*/
 
 // Common color css
-$primary_solid: #5693BF;
+$primary_solid: #5693BF; 
 $primary_light: #D6EEFF;
 $secondary_solid: #F17999;
 $secondary_light: #FFD6E1;
 $tertiary_solid: #FAC252;
 $tertiary_light: #FFE2A8;
-$dark: #224259;
+$dark: #224259; 
 $shadow: #E5EEF5;
 $green: #54BE72;
 $bg: #F2F9FF;
@@ -15,6 +15,7 @@ $heading_size: 38px;
 $heading_color: $dark;
 $change: #232323;
 $sidebar_bg:#E8F0F7;
+$text_clr:#fff;
 
 // Body
 $body_font: "SF-UI-Display", serif;
@@ -49,3 +50,10 @@ $scroll_bg: $primary_solid;
 $scroll_icon_color: #fff;
 $scroll_shadow: $primary_solid;
 $scroll_shadow_opacity: 0.3;
+
+.container-fluid{
+    padding:0 110px; 
+}
+.body_bg{
+    background-color: #061621; 
+}
