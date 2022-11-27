@@ -1600,6 +1600,10 @@ select {
   padding-right: 18px;
   position: relative;
 }
+.bannerTwo-image img {
+  max-width: 470px;
+  border-radius: 20px 20px 70% !important;
+}
 .bannerTwo-image::before {
   content: "";
   position: absolute;
@@ -1610,10 +1614,6 @@ select {
   background-color: #5693BF;
   border-radius: 20px 20px 70%;
   z-index: -1;
-}
-.bannerTwo-image img {
-  max-width: 470px;
-  border-radius: 20px 20px 70%;
 }
 .bannerTwo-image.bannerTwo-image-alt {
   border-radius: 50% 20px 20px;
@@ -1634,7 +1634,7 @@ select {
   z-index: -1;
 }
 .bannerTwo-image.bannerTwo-image-alt img {
-  border-radius: 50% 20px 20px;
+  border-radius: 50% 20px 20px !important;
   max-width: 680px;
 }
 

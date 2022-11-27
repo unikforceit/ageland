@@ -11,7 +11,10 @@
     max-width: 478px;
     padding-right: 18px;
     position: relative;
-
+    img {
+        max-width: 470px;
+        border-radius: 20px 20px 70% !important;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -24,10 +27,7 @@
         z-index: -1;
     }
 
-    img {
-        max-width: 470px;
-        border-radius: 20px 20px 70%;
-    }
+
 
     &.bannerTwo-image-alt {
         border-radius: 50% 20px 20px;
@@ -49,7 +49,7 @@
         }
 
         img {
-            border-radius: 50% 20px 20px;
+            border-radius: 50% 20px 20px !important;
             max-width: 680px;
         }
     }
