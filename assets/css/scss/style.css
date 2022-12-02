@@ -1566,6 +1566,12 @@ select {
 .happy_coustomer .happy_coustomer_wrap .customer li {
   margin-left: -25px;
 }
+.happy_coustomer .happy_coustomer_wrap .customer li img {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+}
 .happy_coustomer .happy_coustomer_wrap .customer li:first-child {
   margin-left: 0;
   z-index: 1;

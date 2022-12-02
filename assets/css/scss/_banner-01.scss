@@ -151,6 +151,12 @@
         .customer {
             li {
                 margin-left: -25px;
+                 img {
+                    width: 60px;
+                    height: 60px;
+                    display: block;
+                    margin: 0 auto;
+                }
 
                 &:first-child {
                     margin-left: 0;
